@@ -1,11 +1,5 @@
 ﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Support.UI;
 using SimpleSeleniumFramework.Websites.bbc_news.Pages;
-using System;
-using System.Activities.Expressions;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using TechTalk.SpecFlow;
 
 namespace SimpleSeleniumFramework.Websites.bbc_news.Steps
@@ -13,9 +7,7 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Steps
     [Binding]
     public sealed class SigninSteps
     {
-
         private readonly MySportPage _mySportPage;
-
         public SigninSteps(IWebDriver driver)
         {
             _mySportPage = new MySportPage(driver);

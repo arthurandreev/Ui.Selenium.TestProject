@@ -3,9 +3,6 @@ using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SimpleSeleniumFramework.TestFramework
 {
@@ -62,14 +59,34 @@ namespace SimpleSeleniumFramework.TestFramework
                 Console.WriteLine(e);
             }
         }
-        protected bool WaitforElementToBeVisible(By by, int timeoutInSeconds)
+        protected void WaitforElementToBeVisible(By by, int timeoutInSeconds)
+        {
+            var element = Driver.FindElement(by);
+            var wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(timeoutInSeconds));
+            wait.Until(condition => element.Displayed);
+        }
+
+        protected void WaitforElementToBeClickable(IWebElement element, int timeoutInSeconds)
+        {
+            
+            var wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(timeoutInSeconds));
+            wait.Until(condition => element.Enabled);
+        }
+
+        protected void WaitforElementToBeVisible(IWebElement element, int timeoutInSeconds)
+        {
+            var wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(timeoutInSeconds));
+            wait.Until(condition => element.Displayed);
+        }
+
+        protected bool WaitForElementToBeInvisible(By by, int timeoutInSeconds)
         {
             try
             {
                 var element = Driver.FindElement(by);
                 var wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(timeoutInSeconds));
-                wait.Until(condition => element.Displayed);
-                return element.Displayed;
+                wait.Until(condition => !element.Displayed);
+                return !element.Displayed;
             }
             catch (NoSuchElementException)
             {
@@ -80,9 +97,23 @@ namespace SimpleSeleniumFramework.TestFramework
                 return true;
             }
         }
-        protected void WaitForPageToLoad()
+
+        protected bool WaitForElementToBeInvisible(IWebElement element, int timeoutInSeconds)
         {
-            WaitforElementToBeVisible(By.Id("bbcprivacy-continue-button"), 5);
+            try
+            {
+                var wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(timeoutInSeconds));
+                wait.Until(condition => !element.Displayed);
+                return !element.Displayed;
+            }
+            catch (NoSuchElementException)
+            {
+                return true;
+            }
+            catch (StaleElementReferenceException)
+            {
+                return true;
+            }
         }
     }
 }
