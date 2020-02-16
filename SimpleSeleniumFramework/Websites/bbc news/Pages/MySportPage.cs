@@ -7,8 +7,8 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
    public class MySportPage : PageManagerFactory
     {
         private readonly string Url = "https://www.bbc.co.uk/sport/my-sport";
-        private readonly string Username = "arthur.andreev21@gmail.com";
-        private readonly string Password = "&n7cLffsuRdH7hJ";
+        private readonly string Username = "testautomation1011@gmail.com";
+        private readonly string Password = "ghBabcdFaq$456$";
         private IWebElement MyAccountButton => GetElement(By.Id("idcta-link"));
         private IWebElement SignInButtonOnMainPage => GetElement(By.XPath("//*[contains(text(), 'Sign in')]"));
         private IWebElement SignInButtonOnSigninPage => GetElement(By.Id("submit-button"));
