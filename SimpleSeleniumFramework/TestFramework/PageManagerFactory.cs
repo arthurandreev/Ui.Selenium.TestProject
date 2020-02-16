@@ -67,7 +67,8 @@ namespace SimpleSeleniumFramework.TestFramework
         }
 
         protected void WaitforElementToBeClickable(IWebElement element, int timeoutInSeconds)
-        {          
+        {
+            
             var wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(timeoutInSeconds));
             wait.Until(condition => element.Enabled);
         }

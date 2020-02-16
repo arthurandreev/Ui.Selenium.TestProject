@@ -1,0 +1,10 @@
+﻿2020-02-14T14:56:07.5408550+00:00;Thread#1;Info;Reading test run result from Json file "C:\Users\arthurandreev\AppData\Local\Temp\tmp6FAD.tmp".
+2020-02-14T14:56:07.5468628+00:00;Thread#1;Info;Successfully read test run result from Json file "C:\Users\arthurandreev\AppData\Local\Temp\tmp6FAD.tmp"
+2020-02-14T14:56:07.5478551+00:00;Thread#1;Info;Deserializing test run result
+2020-02-14T14:56:08.5718556+00:00;Thread#1;Info;Successfully deserialized test run result
+2020-02-14T14:56:08.5718556+00:00;Thread#1;Info;Loading test run result
+2020-02-14T14:56:08.6209346+00:00;Thread#1;Info;Successfully loaded test run result
+2020-02-14T14:56:08.6409164+00:00;Thread#1;Info;creating 1 report(s)
+2020-02-14T14:56:08.6409164+00:00;Thread#1;Info;generate Report ReportTemplate.cshtml
+2020-02-14T14:56:11.1468543+00:00;Thread#1;Info;Finished generating reports.
+========== End of log file ==========
