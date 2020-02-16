@@ -12,7 +12,6 @@ namespace SimpleSeleniumFramework
     [Binding]
     public class DriverManagerFactory
     {
-
         private readonly IObjectContainer _objectContainer;
         private IWebDriver _driver;
         public DriverManagerFactory(IObjectContainer container)
@@ -33,10 +32,8 @@ namespace SimpleSeleniumFramework
 
             Console.WriteLine("\nsetting up chrome driver");
             var outputDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            _driver = new ChromeDriver(outputDirectory, options);
-        
+            _driver = new ChromeDriver(outputDirectory, options);   
             _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
-
             _objectContainer.RegisterInstanceAs(_driver);
 
             Console.WriteLine("chrome driver setup complete\n");
