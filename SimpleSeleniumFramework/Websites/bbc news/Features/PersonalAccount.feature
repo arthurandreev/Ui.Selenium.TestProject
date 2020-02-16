@@ -1,7 +1,7 @@
 ﻿Feature: PersonalAccount
 As a user, 
 I want to sign into my bbc account, 
-So that I can access bbc sports content personalised to me
+So that I can view bbc sports content personalised to me
 
 @regression
 Scenario: Sign-in to access personalised sports page
