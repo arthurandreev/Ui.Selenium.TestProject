@@ -53,8 +53,6 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
             Assert.IsTrue(MixedMartialArtsTopic.Enabled);
             Assert.IsTrue(BoxingTopic.Enabled); 
             Assert.IsTrue(Formula1Topic.Enabled);
-            Assert.IsTrue(YourAccountTab.Enabled);
-            Assert.IsTrue(EditMySportButton.Enabled);
         }
     }
 }
