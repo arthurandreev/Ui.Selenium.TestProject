@@ -27,13 +27,11 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
         {
             GoToUrl(Url);
         }
-
         public void NavigateToSigninPage()
         {
             FluentWaitForElementToAppear(By.XPath("//*[contains(text(), 'Sign in')]"), 10, 500);
             ClickElement(SignInOnLandingPage);
         }
-
         public void EnterUsernameAndPassword()
         {
            FluentWaitForElementToAppear(By.Id("user-identifier-input"), 10, 500);
