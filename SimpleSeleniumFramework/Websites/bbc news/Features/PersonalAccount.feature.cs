@@ -19,8 +19,8 @@ namespace SimpleSeleniumFramework.Websites.BbcNews.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.1.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("PersonalAccount", Description="As a user, \r\nI want to sign into my bbc account, \r\nSo that I can access bbc sport" +
-        "s content personalised to me", SourceFile="Websites\\bbc news\\Features\\PersonalAccount.feature", SourceLine=0)]
+    [TechTalk.SpecRun.FeatureAttribute("PersonalAccount", Description="As a user, \r\nI want to sign into my bbc account, \r\nSo that I can view bbc sports " +
+        "content personalised to me", SourceFile="Websites\\bbc news\\Features\\PersonalAccount.feature", SourceLine=0)]
     public partial class PersonalAccountFeature
     {
         
@@ -35,8 +35,8 @@ namespace SimpleSeleniumFramework.Websites.BbcNews.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "PersonalAccount", "As a user, \r\nI want to sign into my bbc account, \r\nSo that I can access bbc sport" +
-                    "s content personalised to me", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "PersonalAccount", "As a user, \r\nI want to sign into my bbc account, \r\nSo that I can view bbc sports " +
+                    "content personalised to me", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         

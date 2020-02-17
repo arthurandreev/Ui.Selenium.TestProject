@@ -59,61 +59,26 @@ namespace SimpleSeleniumFramework.TestFramework
                 Console.WriteLine(e);
             }
         }
-        protected void WaitforElementToBeVisible(By by, int timeoutInSeconds)
-        {
-            var element = Driver.FindElement(by);
-            var wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(timeoutInSeconds));
-            wait.Until(condition => element.Displayed);
-        }
 
-        protected void WaitforElementToBeClickable(IWebElement element, int timeoutInSeconds)
+        protected void FluentWaitForElementToAppear(By by, int timeout, int pollInterval)
         {
-            
-            var wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(timeoutInSeconds));
-            wait.Until(condition => element.Enabled);
+            var fluentWait = new DefaultWait<IWebDriver>(Driver)
+            {
+                Timeout = TimeSpan.FromSeconds(timeout),
+                PollingInterval = TimeSpan.FromMilliseconds(pollInterval)
+            };
+            fluentWait.IgnoreExceptionTypes(typeof(NoSuchElementException));
+            fluentWait.Until(x => x.FindElement(by));
         }
-
-        protected void WaitforElementToBeVisible(IWebElement element, int timeoutInSeconds)
+        protected void FluentWaitForElementToDisappear(By by)
         {
-            var wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(timeoutInSeconds));
-            wait.Until(condition => element.Displayed);
-        }
-
-        protected bool WaitForElementToBeInvisible(By by, int timeoutInSeconds)
-        {
-            try
+            var fluentWait = new DefaultWait<IWebDriver>(Driver)
             {
-                var element = Driver.FindElement(by);
-                var wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(timeoutInSeconds));
-                wait.Until(condition => !element.Displayed);
-                return !element.Displayed;
-            }
-            catch (NoSuchElementException)
-            {
-                return true;
-            }
-            catch (StaleElementReferenceException)
-            {
-                return true;
-            }
-        }
-
-        protected bool WaitForElementToBeInvisible(IWebElement element, int timeoutInSeconds)
-        {
-            try
-            {
-                var wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(timeoutInSeconds));
-                wait.Until(condition => !element.Displayed);
-                return !element.Displayed;
-            }
-            catch (NoSuchElementException)
-            {
-                return true;
-            }
-            catch (StaleElementReferenceException)
-            {
-                return true;
-            }
+                Timeout = TimeSpan.FromSeconds(30),
+                PollingInterval = TimeSpan.FromMilliseconds(500)
+            };
+            fluentWait.IgnoreExceptionTypes(typeof(NoSuchElementException));
+            fluentWait.Until(x => (x.FindElements(by).Count == 0));
         }
     }
 }
