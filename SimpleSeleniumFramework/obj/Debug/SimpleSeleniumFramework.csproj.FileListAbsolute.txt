@@ -533,8 +533,8 @@ C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleni
 C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\Utf8Json.xml
 C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\WebDriver.xml
 C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\WebDriver.Support.xml
-C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\obj\Debug\SimpleSeleniumFramework.csprojAssemblyReference.cache
 C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\obj\Debug\SimpleSeleniumFramework.sourcelink.json
 C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\obj\Debug\SimpleSeleniumFramework.csproj.CopyComplete
 C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\obj\Debug\SimpleSeleniumFramework.dll
 C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\obj\Debug\SimpleSeleniumFramework.pdb
+C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\obj\Debug\SimpleSeleniumFramework.csprojAssemblyReference.cache

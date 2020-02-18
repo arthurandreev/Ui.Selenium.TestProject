@@ -29,14 +29,13 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
         }
         public void NavigateToSigninPage()
         {
-            FluentWaitForElementToAppear(By.XPath("//*[contains(text(), 'Sign in')]"), 10, 500);
+            FluentWaitForElementToAppear(By.XPath("//*[contains(text(), 'Sign in')]"), 30, 500);
             ClickElement(SignInOnLandingPage);
         }
         public void EnterUsernameAndPassword()
         {
-           FluentWaitForElementToAppear(By.Id("user-identifier-input"), 10, 500);
+           FluentWaitForElementToAppear(By.Id("submit-button"), 30, 500);
            EmailTextBox.SendKeys(Username);
-           FluentWaitForElementToAppear(By.Id("password-input"), 10, 500);
            PasswordTextBox.SendKeys(Password);
         }
 
@@ -47,9 +46,9 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
 
         public void ValidateNewsContent()
         {
-            FluentWaitForElementToAppear(By.XPath("//*[@class='component twickenham']//span[contains(text(), 'Mixed Martial Arts')]"), 20, 500);
-            FluentWaitForElementToAppear(By.XPath("//*[@class='component twickenham']//span[contains(text(), 'Boxing')]"), 20, 500);
-            FluentWaitForElementToAppear(By.XPath("//*[@class='component twickenham']//span[contains(text(), 'Formula 1')]"), 20, 500);
+            FluentWaitForElementToAppear(By.XPath("//*[@class='component twickenham']//span[contains(text(), 'Mixed Martial Arts')]"), 30, 500);
+            FluentWaitForElementToAppear(By.XPath("//*[@class='component twickenham']//span[contains(text(), 'Boxing')]"), 30, 500);
+            FluentWaitForElementToAppear(By.XPath("//*[@class='component twickenham']//span[contains(text(), 'Formula 1')]"), 30, 500);
             Assert.IsTrue(MixedMartialArtsTopic.Enabled);
             Assert.IsTrue(BoxingTopic.Enabled); 
             Assert.IsTrue(Formula1Topic.Enabled);
