@@ -9,7 +9,6 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
         private readonly string Url = "https://www.bbc.co.uk/sport/my-sport";
         private readonly string Username = "testautomation1011@gmail.com";
         private readonly string Password = "ghBabcdFaq$456$";
-        private IWebElement YourAccountTab => GetElement(By.Id("idcta-link"));
         private IWebElement SignInOnLandingPage => GetElement(By.XPath("//*[contains(text(), 'Sign in')]"));
         private IWebElement SignInButtonOnSigninPage => GetElement(By.Id("submit-button"));
         private IWebElement EmailTextBox => GetElement(By.Id("user-identifier-input"));
@@ -17,7 +16,6 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
         private IWebElement MixedMartialArtsTopic => GetElement(By.XPath("//*[@class='component twickenham']//span[contains(text(), 'Mixed Martial Arts')]"));
         private IWebElement BoxingTopic => GetElement(By.XPath("//*[@class='component twickenham']//span[contains(text(), 'Boxing')]"));
         private IWebElement Formula1Topic => GetElement(By.XPath("//*[@class='component twickenham']//span[contains(text(), 'Formula 1')]"));
-        private IWebElement EditMySportButton => GetElement(By.XPath("//*[contains(text(), 'Edit My Sport')]"));
        
         public MySportPage(IWebDriver driver) : base(driver)
         {
