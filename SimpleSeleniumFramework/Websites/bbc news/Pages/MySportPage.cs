@@ -22,6 +22,7 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
         public MySportPage(IWebDriver driver) : base(driver)
         {
         }
+
         public void AcceptCookies()
         {
             FluentWaitForElementToAppear(By.Id("bbcprivacy-continue-button"), 10, 500);
