@@ -38,14 +38,14 @@ namespace SimpleSeleniumFramework.TestFramework
                 Console.WriteLine(e);
             }
         }
-        protected void ClickElement(IWebElement element, string elementText = "<no element text supplied>")
+        protected void ClickElement(IWebElement element)
         {
-            Console.WriteLine($"Clicking {elementText} at location {element.Location}");
+            Console.WriteLine($"Clicking {element.Text} at location {element.Location}");
             try
             {
                 var wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(15));
                 wait.Until(condition => element != null && element.Enabled);
-                MoveToElement(element, elementText);
+                MoveToElement(element, element.Text);
                 element.Click();
             }
             catch (ElementNotVisibleException e)
@@ -55,7 +55,7 @@ namespace SimpleSeleniumFramework.TestFramework
             }
             catch (Exception e)
             {
-                Console.WriteLine($"Cannot click the following element: {elementText}");
+                Console.WriteLine($"Cannot click the following element: {element.Text}");
                 Console.WriteLine(e);
             }
         }
@@ -79,6 +79,18 @@ namespace SimpleSeleniumFramework.TestFramework
             };
             fluentWait.IgnoreExceptionTypes(typeof(NoSuchElementException));
             fluentWait.Until(x => (x.FindElements(by).Count == 0));
+        }
+
+        protected void DismissAlert()
+        {
+            try
+            {
+                Driver.SwitchTo().Alert().Dismiss();
+            }
+            catch (NoAlertPresentException)
+            {
+                Console.WriteLine("Alert not present");
+            }
         }
     }
 }

@@ -9,6 +9,8 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
         private readonly string Url = "https://www.bbc.co.uk/sport/my-sport";
         private readonly string Username = "testautomation1011@gmail.com";
         private readonly string Password = "ghBabcdFaq$456$";
+        private IWebElement OkCookiesButton => GetElement(By.Id("bbcprivacy-continue-button"));
+        private IWebElement AcceptCookiesButton => GetElement(By.Id("bbccookies-continue-button"));
         private IWebElement SignInOnLandingPage => GetElement(By.XPath("//*[contains(text(), 'Sign in')]"));
         private IWebElement SignInButtonOnSigninPage => GetElement(By.Id("submit-button"));
         private IWebElement EmailTextBox => GetElement(By.Id("user-identifier-input"));
@@ -20,18 +22,28 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
         {
 
         }
+
+        public void AcceptCookies()
+        {
+            FluentWaitForElementToAppear(By.Id("bbcprivacy-continue-button"), 10, 500);
+            ClickElement(OkCookiesButton);
+            FluentWaitForElementToAppear(By.Id("bbccookies-continue-button"), 10, 500);
+            ClickElement(AcceptCookiesButton);
+        }
         public void NavigateToMySportPage()
         {
             GoToUrl(Url);
+            DismissAlert();
         }
         public void NavigateToSigninPage()
         {
-            FluentWaitForElementToAppear(By.XPath("//*[contains(text(), 'Sign in')]"), 30, 500);
+            AcceptCookies();
+            FluentWaitForElementToAppear(By.XPath("//*[contains(text(), 'Sign in')]"), 10, 500);
             ClickElement(SignInOnLandingPage);
         }
         public void EnterUsernameAndPassword()
         {
-           FluentWaitForElementToAppear(By.Id("submit-button"), 30, 500);
+           FluentWaitForElementToAppear(By.Id("submit-button"), 10, 500);
            EmailTextBox.SendKeys(Username);
            PasswordTextBox.SendKeys(Password);
         }
@@ -43,9 +55,9 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
 
         public void ValidateNewsContent()
         {
-            FluentWaitForElementToAppear(By.XPath("//*[@class='component twickenham']//span[contains(text(), 'Mixed Martial Arts')]"), 30, 500);
-            FluentWaitForElementToAppear(By.XPath("//*[@class='component twickenham']//span[contains(text(), 'Boxing')]"), 30, 500);
-            FluentWaitForElementToAppear(By.XPath("//*[@class='component twickenham']//span[contains(text(), 'Formula 1')]"), 30, 500);
+            FluentWaitForElementToAppear(By.XPath("//*[@class='component twickenham']//span[contains(text(), 'Mixed Martial Arts')]"), 20, 500);
+            FluentWaitForElementToAppear(By.XPath("//*[@class='component twickenham']//span[contains(text(), 'Boxing')]"), 20, 500);
+            FluentWaitForElementToAppear(By.XPath("//*[@class='component twickenham']//span[contains(text(), 'Formula 1')]"), 20, 500);
             Assert.IsTrue(MixedMartialArtsTopic.Enabled);
             Assert.IsTrue(BoxingTopic.Enabled); 
             Assert.IsTrue(Formula1Topic.Enabled);
