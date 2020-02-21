@@ -20,10 +20,12 @@ namespace SimpleSeleniumFramework.TestFramework
         {
             return Driver.FindElement(by);
         }
+
         protected IList<IWebElement> GetElements(By by)
         {
             return Driver.FindElements(by);
         }
+
         protected void MoveToElement(IWebElement element, string elementText = "<no element text supplied>")
         {
             try
@@ -37,6 +39,7 @@ namespace SimpleSeleniumFramework.TestFramework
                 Console.WriteLine(e);
             }
         }
+
         protected void ClickElement(IWebElement element)
         {
             Console.WriteLine($"Clicking {element.Text} at location {element.Location}");
@@ -58,6 +61,7 @@ namespace SimpleSeleniumFramework.TestFramework
                 Console.WriteLine(e);
             }
         }
+
         protected void FluentWaitForElementToAppear(By by, int timeout, int pollInterval)
         {
             var fluentWait = new DefaultWait<IWebDriver>(Driver)
@@ -68,6 +72,7 @@ namespace SimpleSeleniumFramework.TestFramework
             fluentWait.IgnoreExceptionTypes(typeof(NoSuchElementException));
             fluentWait.Until(x => x.FindElement(by));
         }
+
         protected void FluentWaitForElementToDisappear(By by)
         {
             var fluentWait = new DefaultWait<IWebDriver>(Driver)
@@ -78,6 +83,7 @@ namespace SimpleSeleniumFramework.TestFramework
             fluentWait.IgnoreExceptionTypes(typeof(NoSuchElementException));
             fluentWait.Until(x => (x.FindElements(by).Count == 0));
         }
+
         protected void DismissAlert()
         {
             try

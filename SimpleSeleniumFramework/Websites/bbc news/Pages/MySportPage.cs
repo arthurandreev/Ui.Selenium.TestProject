@@ -22,7 +22,6 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
         {
 
         }
-
         public void AcceptCookies()
         {
             FluentWaitForElementToAppear(By.Id("bbcprivacy-continue-button"), 10, 500);
@@ -30,23 +29,27 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
             FluentWaitForElementToAppear(By.Id("bbccookies-continue-button"), 10, 500);
             ClickElement(AcceptCookiesButton);
         }
+
         public void NavigateToMySportPage()
         {
             GoToUrl(Url);
             DismissAlert();
         }
+
         public void NavigateToSigninPage()
         {
             AcceptCookies();
             FluentWaitForElementToAppear(By.XPath("//*[contains(text(), 'Sign in')]"), 10, 500);
             ClickElement(SignInOnLandingPage);
         }
+
         public void EnterUsernameAndPassword()
         {
            FluentWaitForElementToAppear(By.Id("submit-button"), 10, 500);
            EmailTextBox.SendKeys(Username);
            PasswordTextBox.SendKeys(Password);
         }
+
         public void ClickToSignin()
         {
             ClickElement(SignInButtonOnSigninPage);
