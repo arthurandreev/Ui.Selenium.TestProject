@@ -24,7 +24,6 @@ namespace SimpleSeleniumFramework.TestFramework
         {
             return Driver.FindElements(by);
         }
-
         protected void MoveToElement(IWebElement element, string elementText = "<no element text supplied>")
         {
             try
@@ -59,7 +58,6 @@ namespace SimpleSeleniumFramework.TestFramework
                 Console.WriteLine(e);
             }
         }
-
         protected void FluentWaitForElementToAppear(By by, int timeout, int pollInterval)
         {
             var fluentWait = new DefaultWait<IWebDriver>(Driver)
@@ -80,7 +78,6 @@ namespace SimpleSeleniumFramework.TestFramework
             fluentWait.IgnoreExceptionTypes(typeof(NoSuchElementException));
             fluentWait.Until(x => (x.FindElements(by).Count == 0));
         }
-
         protected void DismissAlert()
         {
             try

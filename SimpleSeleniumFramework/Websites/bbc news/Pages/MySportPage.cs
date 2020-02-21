@@ -47,7 +47,6 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
            EmailTextBox.SendKeys(Username);
            PasswordTextBox.SendKeys(Password);
         }
-
         public void ClickToSignin()
         {
             ClickElement(SignInButtonOnSigninPage);
