@@ -18,9 +18,9 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
         private IWebElement MixedMartialArtsTopic => GetElement(By.XPath("//*[@class='component twickenham']//span[contains(text(), 'Mixed Martial Arts')]"));
         private IWebElement BoxingTopic => GetElement(By.XPath("//*[@class='component twickenham']//span[contains(text(), 'Boxing')]"));
         private IWebElement Formula1Topic => GetElement(By.XPath("//*[@class='component twickenham']//span[contains(text(), 'Formula 1')]")); 
+        
         public MySportPage(IWebDriver driver) : base(driver)
         {
-
         }
         public void AcceptCookies()
         {
