@@ -53,7 +53,6 @@ namespace SimpleSeleniumFramework.TestFramework
             catch (ElementNotVisibleException e)
             {
                 Console.WriteLine(e);
-                element.Click();
             }
             catch (Exception e)
             {
