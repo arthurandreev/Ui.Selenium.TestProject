@@ -26,7 +26,7 @@ namespace SimpleSeleniumFramework.TestFramework
             return Driver.FindElements(by);
         }
 
-        protected void MoveToElement(IWebElement element, string elementText = "<no element text supplied>")
+        protected void MoveToElement(IWebElement element)
         {
             try
             {
@@ -35,7 +35,7 @@ namespace SimpleSeleniumFramework.TestFramework
             }
             catch (NoSuchElementException e)
             {
-                Console.WriteLine($"Cannot move to the following element: {elementText}");
+                Console.WriteLine($"Cannot move to the following element: {element.Text}");
                 Console.WriteLine(e);
             }
         }
@@ -47,7 +47,7 @@ namespace SimpleSeleniumFramework.TestFramework
             {
                 var wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(15));
                 wait.Until(condition => element != null && element.Enabled);
-                MoveToElement(element, element.Text);
+                MoveToElement(element);
                 element.Click();
             }
             catch (ElementNotVisibleException e)
