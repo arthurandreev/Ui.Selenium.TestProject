@@ -9,4 +9,4 @@ Scenario: Sign-in to access personalised sports page
 	When I navigate to signin page
 	And I enter correct username and password
 	And I sign in successfully
-	Then I expect bbc sports news content to be filtered to mixed martial arts, boxing and formula 1
+	Then I expect my bbc sports news to enable me to edit my topic selection

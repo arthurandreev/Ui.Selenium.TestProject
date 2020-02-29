@@ -72,12 +72,12 @@ namespace SimpleSeleniumFramework.TestFramework
             fluentWait.Until(x => x.FindElement(by));
         }
 
-        protected void FluentWaitForElementToDisappear(By by)
+        protected void FluentWaitForElementToDisappear(By by, int timeout, int pollInterval)
         {
             var fluentWait = new DefaultWait<IWebDriver>(Driver)
             {
-                Timeout = TimeSpan.FromSeconds(30),
-                PollingInterval = TimeSpan.FromMilliseconds(500)
+                Timeout = TimeSpan.FromSeconds(timeout),
+                PollingInterval = TimeSpan.FromMilliseconds(pollInterval)
             };
             fluentWait.IgnoreExceptionTypes(typeof(NoSuchElementException));
             fluentWait.Until(x => (x.FindElements(by).Count == 0));

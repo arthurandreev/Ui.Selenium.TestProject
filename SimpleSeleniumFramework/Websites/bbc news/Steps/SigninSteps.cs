@@ -37,10 +37,10 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Steps
             _mySportPage.ClickToSignin();
         }
 
-        [Then(@"I expect bbc sports news content to be filtered to mixed martial arts, boxing and formula 1")]
-        public void ThenIExpectBbcSportsNewsContentToBeFilteredToMixedMartialArtsBoxingAndFormula1()
+        [Then(@"I expect my bbc sports news to enable me to edit my topic selection")]
+        public void ThenIExpectMyBbcSportsNewsToEnableMeToEditMyTopicSelection()
         {
-            _mySportPage.ValidateNewsContent();
+            _mySportPage.ValidateMyBbcSportsNewsPage();
         }
     }
 }
