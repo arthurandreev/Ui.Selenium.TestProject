@@ -17,10 +17,7 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
         private IWebElement PasswordTextBox => GetElement(By.Id("password-input"));
         private IWebElement EditMySport => GetElement(By.XPath("//*[@class='button sp-c-mysport-banner__button button--my-bbc gel-long-primer-bold']//span[contains(text(), 'Edit My Sport')]"));
         
-        public MySportPage(IWebDriver driver) : base(driver)
-        {
-        }
-
+        public MySportPage(IWebDriver driver) : base(driver) {}
         public void AcceptCookies()
         {
             FluentWaitForElementToAppear(By.Id("bbcprivacy-continue-button"), 10, 500);
