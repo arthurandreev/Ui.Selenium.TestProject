@@ -113,8 +113,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("I sign in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 12
- testRunner.Then("I expect bbc sports news content to be filtered to mixed martial arts, boxing and" +
-                        " formula 1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I expect my bbc sports news to enable me to edit my topic selection", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

@@ -15,9 +15,7 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
         private IWebElement SignInButtonOnSigninPage => GetElement(By.Id("submit-button"));
         private IWebElement EmailTextBox => GetElement(By.Id("user-identifier-input"));
         private IWebElement PasswordTextBox => GetElement(By.Id("password-input"));
-        private IWebElement MixedMartialArtsTopic => GetElement(By.XPath("//*[@class='component twickenham']//span[contains(text(), 'Mixed Martial Arts')]"));
-        private IWebElement BoxingTopic => GetElement(By.XPath("//*[@class='component twickenham']//span[contains(text(), 'Boxing')]"));
-        private IWebElement Formula1Topic => GetElement(By.XPath("//*[@class='component twickenham']//span[contains(text(), 'Formula 1')]")); 
+        private IWebElement EditMySport => GetElement(By.XPath("//*[@class='button sp-c-mysport-banner__button button--my-bbc gel-long-primer-bold']//span[contains(text(), 'Edit My Sport')]"));
         
         public MySportPage(IWebDriver driver) : base(driver)
         {
@@ -56,14 +54,10 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
             ClickElement(SignInButtonOnSigninPage);
         }
 
-        public void ValidateNewsContent()
+        public void ValidateMyBbcSportsNewsPage()
         {
-            FluentWaitForElementToAppear(By.XPath("//*[@class='component twickenham']//span[contains(text(), 'Mixed Martial Arts')]"), 20, 500);
-            FluentWaitForElementToAppear(By.XPath("//*[@class='component twickenham']//span[contains(text(), 'Boxing')]"), 20, 500);
-            FluentWaitForElementToAppear(By.XPath("//*[@class='component twickenham']//span[contains(text(), 'Formula 1')]"), 20, 500);
-            Assert.IsTrue(MixedMartialArtsTopic.Enabled);
-            Assert.IsTrue(BoxingTopic.Enabled); 
-            Assert.IsTrue(Formula1Topic.Enabled);
+            FluentWaitForElementToAppear(By.XPath("//*[@class='button sp-c-mysport-banner__button button--my-bbc gel-long-primer-bold']//span[contains(text(), 'Edit My Sport')]"), 20, 500);
+            Assert.IsTrue(EditMySport.Enabled);
         }
     }
 }
