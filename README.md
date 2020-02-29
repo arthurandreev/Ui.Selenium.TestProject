@@ -1,5 +1,5 @@
 # SeleniumFrameworkProject
-This is a living project with functionality that will be extended regularly to allow me to learn latest web testing tools and best practices. 
+This is a living project with functionality that will be extended regularly to allow me to play around with latest web testing tools and best practices. 
 
 # MVP:
 Basic navigation and manipulation of web elements
