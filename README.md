@@ -1,7 +1,7 @@
 # SeleniumFrameworkProject
 This is a living project with functionality that will be extended regularly to allow me to advance my knowledge of latest web testing tools and best practices. 
 
-## MVP
+## MVP:
 - Navigation and manipulation of web elements
 - Have test setup and test teardown that are run before and after each scenario
 - Have one specflow feature with at least 2 scenarios
@@ -12,7 +12,7 @@ This is a living project with functionality that will be extended regularly to a
 - Host the project on a cloud hosting platform to enable automated nightly testing in CI/CD pipeline
 - Extend the project to integrate Selenium Grid into the project to allow parallel running of tests on Azure servers
 
-### Some of the resources that I found particularly useful for this type of project
+### Some of the resources that I found particularly useful for this type of project:
 - https://www.automatetheplanet.com/selenium-webdriver-locators-cheat-sheet/
 - https://specflow.org/documentation/
 - https://ultimateqa.com/common-selenium-webdriver-errors-fix/
