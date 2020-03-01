@@ -2,7 +2,7 @@
 This is a living project with functionality that will be extended regularly to allow me to advance my knowledge of latest web testing tools and best practices. 
 
 ## MVP
-- Basic navigation and manipulation of web elements
+- Navigation and manipulation of web elements
 - Have test setup and test teardown that are run after each scenario
 - Have one specflow feature with at least 2 scenarios
 
