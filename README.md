@@ -13,7 +13,7 @@ This is a joint project between myself and @LulzimAhmeti. Both of us are contrib
 ## Possible Extensions:
 - Extend the project to allow for cross browser testing - TODO
 - Host the project on a cloud hosting platform to enable automated nightly test runs in CI/CD pipeline - TODO
-- Extend the project to integrate Selenium Grid into the project to allow parallel running of tests on Azure servers - TODO
+- Extend the project to integrate Selenium Grid into the project to allow parallel running of tests on cloud servers - TODO
 
 ## Some of the resources used to complete this project:
 - https://www.selenium.dev/selenium/docs/api/dotnet/index.html
