@@ -11,7 +11,6 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
         private readonly string Url = "https://www.bbc.co.uk/sport/my-sport";
         private readonly string Username = "testautomation1011@gmail.com";
         private readonly string Password = "ghBabcdFaq$456$";
-
         private IWebElement OkCookiesButton => GetElement(By.Id("bbcprivacy-continue-button"));
         private IWebElement AcceptCookiesButton => GetElement(By.Id("bbccookies-continue-button"));
         private IWebElement SignInOnLandingPage => GetElement(By.XPath("//*[contains(text(), 'Sign in')]"));
@@ -44,7 +43,6 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
         public void NavigateToSigninPage()
         {
             FluentWaitForElementToAppear(By.XPath("//*[contains(text(), 'Sign in')]"), 10, 500);
-            DismissAlertIfPresent();
             ClickElement(SignInOnLandingPage);          
         }
 
