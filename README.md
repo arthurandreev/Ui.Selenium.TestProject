@@ -14,7 +14,7 @@ This is a joint project between myself and @LulzimAhmeti. Both of us are contrib
 - Host the project on a cloud hosting platform to enable automated nightly testing in CI/CD pipeline
 - Extend the project to integrate Selenium Grid into the project to allow parallel running of tests on Azure servers
 
-## Some of the resources that helped me complete this project:
+## Some of the resources that helped complete this project:
 - https://www.selenium.dev/selenium/docs/api/dotnet/index.html
 - https://www.automatetheplanet.com/selenium-webdriver-locators-cheat-sheet/
 - https://specflow.org/documentation/
