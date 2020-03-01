@@ -3,7 +3,7 @@ This is a living project with functionality that will be extended regularly to a
 
 ## MVP
 - Navigation and manipulation of web elements
-- Have test setup and test teardown that are run after each scenario
+- Have test setup and test teardown that are run before and after each scenario
 - Have one specflow feature with at least 2 scenarios
 
 ## Possible Extensions:
@@ -15,6 +15,7 @@ This is a living project with functionality that will be extended regularly to a
 ### Some of the resources that helped me complete this project
 - https://www.automatetheplanet.com/selenium-webdriver-locators-cheat-sheet/
 - https://specflow.org/documentation/
+- https://ultimateqa.com/common-selenium-webdriver-errors-fix/
 
 
 
