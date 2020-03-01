@@ -9,7 +9,7 @@ This is a joint project between myself and @LulzimAhmeti. Both of us are contrib
 - Have one specflow feature with at least 2 scenarios - WIP
 
 ## Possible Extensions:
-- Add screenshot taking capability to enable screenshoting NoSuchElementException events for enhanced debugging - DONE
+- Add screenshot taking capability to screenshot NoSuchElementException events for enhanced debugging - DONE
 - Extend the project to allow for cross browser testing
 - Host the project on a cloud hosting platform to enable automated nightly testing in CI/CD pipeline
 - Extend the project to integrate Selenium Grid into the project to allow parallel running of tests on Azure servers
