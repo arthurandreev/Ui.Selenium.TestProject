@@ -13,6 +13,7 @@ This is a living project with functionality that will be extended regularly to a
 - Extend the project to integrate Selenium Grid into the project to allow parallel running of tests on Azure servers
 
 ## Some of the resources that helped me complete this project:
+- https://www.selenium.dev/selenium/docs/api/dotnet/index.html
 - https://www.automatetheplanet.com/selenium-webdriver-locators-cheat-sheet/
 - https://specflow.org/documentation/
 - https://ultimateqa.com/common-selenium-webdriver-errors-fix/
