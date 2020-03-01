@@ -4,15 +4,15 @@ This is a living project with functionality that will be extended regularly to a
 This is a joint project between myself and @LulzimAhmeti. Both of us are contributors to this project. 
 
 ## MVP:
-- Navigation and manipulation of web elements
-- Have test setup and test teardown that are run before and after each scenario
-- Have one specflow feature with at least 2 scenarios
+- Navigation and manipulation of web elements - DONE
+- Have test setup and test teardown that are run before and after each scenario - DONE
+- Add screenshot taking capability to screenshot NoSuchElementException events for enhanced debugging - DONE
+- Have one specflow feature with at least 2 scenarios - WIP
 
 ## Possible Extensions:
-- Add screenshot taking capability to enable screenshoting NoSuchElementException events for enhanced debugging 
-- Extend the project to allow for cross browser testing
-- Host the project on a cloud hosting platform to enable automated nightly testing in CI/CD pipeline
-- Extend the project to integrate Selenium Grid into the project to allow parallel running of tests on Azure servers
+- Extend the project to allow for cross browser testing - TODO
+- Host the project on a cloud hosting platform to enable automated nightly testing in CI/CD pipeline - TODO
+- Extend the project to integrate Selenium Grid into the project to allow parallel running of tests on Azure servers - TODO
 
 ## Some of the resources that helped complete this project:
 - https://www.selenium.dev/selenium/docs/api/dotnet/index.html
