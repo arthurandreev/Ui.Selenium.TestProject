@@ -21,10 +21,7 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
         private IWebElement NoThanksButton => GetElement(By.CssSelector("#no"));
         private IWebElement EditMySport => GetElement(By.XPath("//*[@id='my-sport']//span[contains(text(), 'Edit My Sport')]"));
         
-        public MySportPage(IWebDriver driver, ScenarioContext scenarioContext) : base(driver, scenarioContext)
-        {
-        }
-
+        public MySportPage(IWebDriver driver, ScenarioContext scenarioContext) : base(driver, scenarioContext) {}
         public void AcceptCookies()
         {
             FluentWaitForElementToAppear(By.Id("bbcprivacy-continue-button"), 10, 500);
