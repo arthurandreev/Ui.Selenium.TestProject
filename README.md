@@ -1,7 +1,7 @@
 # SeleniumFrameworkProject
 This is a living project with functionality that will be extended regularly to advance knowledge of latest web testing tools and best practices. 
 
-This is a joint project between myself and @LulzimAhmeti. 
+This is a joint project between myself and @LulzimAhmeti. Both of us are contributors to this project. 
 
 ## MVP:
 - Navigation and manipulation of web elements
