@@ -8,9 +8,9 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Steps
     public sealed class SigninSteps
     {
         private readonly MySportPage _mySportPage;
-        public SigninSteps(IWebDriver driver)
+        public SigninSteps(IWebDriver driver, ScenarioContext scenarioContext)
         {
-            _mySportPage = new MySportPage(driver);
+            _mySportPage = new MySportPage(driver, scenarioContext);
         }
 
         [Given(@"I am on bbc sports page")]

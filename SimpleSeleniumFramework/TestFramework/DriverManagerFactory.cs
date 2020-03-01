@@ -28,7 +28,7 @@ namespace SimpleSeleniumFramework
                // "headless",
                 "--start-maximized"
             );
-            options.PageLoadStrategy = PageLoadStrategy.None;
+            options.PageLoadStrategy = PageLoadStrategy.Normal;
 
             Console.WriteLine("\nsetting up chrome driver");
             var outputDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
