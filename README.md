@@ -21,7 +21,6 @@ This is a joint project between myself and @LulzimAhmeti. Both of us are contrib
 - https://specflow.org/documentation/
 - https://ultimateqa.com/common-selenium-webdriver-errors-fix/
 - https://ui.vision/rpa/docs/selenium-ide
-- https://docs.microsoft.com/en-us/azure/devops/pipelines/test/continuous-test-selenium?view=azure-devops
 
 
 
