@@ -4,7 +4,8 @@ This is a living project with functionality that will be extended regularly to a
 This is a joint project between myself and @LulzimAhmeti. Both of us are contributors to this project. 
 
 ## MVP:
-- Page Object Models setup - DONE
+- Page Object Model design pattern - DONE
+- Integrate Specflow into project - DONE
 - Have test setup and test teardown that are run before and after each scenario - DONE
 - Add screenshot taking capability to screenshot NoSuchElementException events for enhanced debugging - DONE
 - Have one specflow feature with at least 2 scenarios - WIP
