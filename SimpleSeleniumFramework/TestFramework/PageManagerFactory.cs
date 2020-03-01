@@ -3,15 +3,18 @@ using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
+using TechTalk.SpecFlow;
 
 namespace SimpleSeleniumFramework.TestFramework
 {
     public abstract class PageManagerFactory
     {
         protected IWebDriver Driver;
-        protected PageManagerFactory(IWebDriver driver)
+        protected ScenarioContext ScenarioContext;
+        public PageManagerFactory(IWebDriver driver, ScenarioContext scenarioContext)
         {
             Driver = driver;
+            ScenarioContext = scenarioContext;
         }
 
         protected string GetUrl() => Driver.Url;
@@ -37,6 +40,7 @@ namespace SimpleSeleniumFramework.TestFramework
             {
                 Console.WriteLine($"Cannot move to the following element: {element.Text}");
                 Console.WriteLine(e);
+                TakeScreenshot();
             }
         }
 
@@ -45,7 +49,7 @@ namespace SimpleSeleniumFramework.TestFramework
             Console.WriteLine($"Clicking {element.Text} at location {element.Location}");
             try
             {
-                var wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(15));
+                var wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(5));
                 wait.Until(condition => element != null && element.Enabled);
                 MoveToElement(element);
                 element.Click();
@@ -83,16 +87,22 @@ namespace SimpleSeleniumFramework.TestFramework
             fluentWait.Until(x => (x.FindElements(by).Count == 0));
         }
 
-        protected void DismissAlert()
+        //TODO: change hardcoded filepath to project directory
+        protected void TakeScreenshot()
         {
             try
             {
-                Driver.SwitchTo().Alert().Dismiss();
+                Screenshot screenShot = ((ITakesScreenshot)Driver).GetScreenshot();
+                string title = ScenarioContext.ScenarioInfo.Title;
+                string screenShotName = title + DateTime.Now.ToString("yyyy-MM-dd-HH_mm_ss");
+                string filePathAndName = "C:\\Users\\arthurandreev\\source\\repos\\SeleniumFrameworkProject\\Screenshots\\" + screenShotName + ".jpeg";
+                screenShot.SaveAsFile(filePathAndName, ScreenshotImageFormat.Jpeg);
             }
-            catch (NoAlertPresentException)
+            catch (Exception e)
             {
-                Console.WriteLine("Alert not present");
+                Console.WriteLine($"Screenshot threw the following exception: {e}");
             }
+            
         }
     }
 }
