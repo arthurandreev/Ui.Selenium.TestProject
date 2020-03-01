@@ -20,6 +20,7 @@ This is a joint project between myself and @LulzimAhmeti. Both of us are contrib
 - https://www.automatetheplanet.com/selenium-webdriver-locators-cheat-sheet/
 - https://specflow.org/documentation/
 - https://ultimateqa.com/common-selenium-webdriver-errors-fix/
+- https://ui.vision/rpa/docs/selenium-ide
 
 
 
