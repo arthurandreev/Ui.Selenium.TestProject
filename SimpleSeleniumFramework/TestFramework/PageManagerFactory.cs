@@ -39,17 +39,16 @@ namespace SimpleSeleniumFramework.TestFramework
             catch (NoSuchElementException e)
             {
                 Console.WriteLine($"Cannot move to the following element: {element.Text}");
-                Console.WriteLine(e);
+                Console.WriteLine($"MoveToElement threw the following exception: {e}");
                 TakeScreenshot();
             }
         }
 
         protected void ClickElement(IWebElement element)
         {
-            Console.WriteLine($"Clicking {element.Text} at location {element.Location}");
             try
             {
-                var wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(5));
+                var wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(10));
                 wait.Until(condition => element != null && element.Enabled);
                 MoveToElement(element);
                 element.Click();
@@ -61,7 +60,7 @@ namespace SimpleSeleniumFramework.TestFramework
             catch (Exception e)
             {
                 Console.WriteLine($"Cannot click the following element: {element.Text}");
-                Console.WriteLine(e);
+                Console.WriteLine($"ClickElement threw the following exception: {e}");
             }
         }
 
@@ -100,7 +99,7 @@ namespace SimpleSeleniumFramework.TestFramework
             }
             catch (Exception e)
             {
-                Console.WriteLine($"Screenshot threw the following exception: {e}");
+                Console.WriteLine($"TakeScreenShot threw the following exception: {e}");
             }
             
         }

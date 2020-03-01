@@ -13,7 +13,7 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
         private readonly string Password = "ghBabcdFaq$456$";
         private IWebElement OkCookiesButton => GetElement(By.Id("bbcprivacy-continue-button"));
         private IWebElement AcceptCookiesButton => GetElement(By.Id("bbccookies-continue-button"));
-        private IWebElement SignInOnLandingPage => GetElement(By.XPath("//*[contains(text(), 'Sign in')]"));
+        private IWebElement SignInOnLandingPage => GetElement(By.XPath("//*[@id='idcta-link']//span[contains(text(), 'Sign in')]"));
         private IWebElement SignInButtonOnSigninPage => GetElement(By.Id("submit-button"));
         private IWebElement EmailTextBox => GetElement(By.Id("user-identifier-input"));
         private IWebElement PasswordTextBox => GetElement(By.Id("password-input"));
@@ -61,6 +61,7 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
 
         public void ValidateMyBbcSportsNewsPage()
         {
+            DismissAlertIfPresent();
             FluentWaitForElementToAppear(By.XPath("//*[@id='my-sport']//span[contains(text(), 'Edit My Sport')]"), 20, 500);
             Assert.IsTrue(EditMySport.Enabled);
             TakeScreenshot();
@@ -70,19 +71,18 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
         {
             try
             {
-                Driver.SwitchTo().Frame(HaveYourSayIFrame);
-                NoThanksButton.Click();
-                Driver.SwitchTo().DefaultContent();
+               Driver.SwitchTo().Frame(HaveYourSayIFrame);
+               NoThanksButton.Click();
+               Driver.SwitchTo().DefaultContent();
             }
             catch (NoSuchFrameException)
             {
-                Console.WriteLine("Frame not present");
+                Console.WriteLine("IFrame not present");
             }
             catch (NoSuchElementException)
             {
-                Console.WriteLine("Element not present");
+                Console.WriteLine("IFrame element not present");
             }
         }
-
    }
 }
