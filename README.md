@@ -4,7 +4,7 @@ This is a living project with functionality that will be extended regularly to a
 This is a joint project between myself and @LulzimAhmeti. Both of us are contributors to this project. 
 
 ## MVP:
-- Navigation and manipulation of web elements
+- Navigation and manipulation of web elements #done
 - Have test setup and test teardown that are run before and after each scenario
 - Have one specflow feature with at least 2 scenarios
 
