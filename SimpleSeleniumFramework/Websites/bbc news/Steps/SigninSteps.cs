@@ -8,9 +8,9 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Steps
     public sealed class SigninSteps
     {
         private readonly MySportPage _mySportPage;
-        public SigninSteps(IWebDriver driver)
+        public SigninSteps(IWebDriver driver, ScenarioContext scenarioContext)
         {
-            _mySportPage = new MySportPage(driver);
+            _mySportPage = new MySportPage(driver, scenarioContext);
         }
 
         [Given(@"I am on bbc sports page")]
@@ -37,10 +37,10 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Steps
             _mySportPage.ClickToSignin();
         }
 
-        [Then(@"I expect bbc sports news content to be filtered to mixed martial arts, boxing and formula 1")]
-        public void ThenIExpectBbcSportsNewsContentToBeFilteredToMixedMartialArtsBoxingAndFormula1()
+        [Then(@"I expect my bbc sports news to enable me to edit my topic selection")]
+        public void ThenIExpectMyBbcSportsNewsToEnableMeToEditMyTopicSelection()
         {
-            _mySportPage.ValidateNewsContent();
+            _mySportPage.ValidateMyBbcSportsNewsPage();
         }
     }
 }

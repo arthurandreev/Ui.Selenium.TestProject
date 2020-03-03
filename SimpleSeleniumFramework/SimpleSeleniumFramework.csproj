@@ -143,9 +143,7 @@
     <Compile Include="Websites\bbc news\Pages\MySportPage.cs" />
     <Compile Include="Websites\bbc news\Steps\SigninSteps.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Websites\bbc news\Hooks\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="runtests.cmd" />

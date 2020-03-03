@@ -25,17 +25,15 @@ namespace SimpleSeleniumFramework
             var options = new ChromeOptions();
             options.AddArguments(
                 "incognito",
-               // "headless",
                 "--start-maximized"
             );
-            options.PageLoadStrategy = PageLoadStrategy.None;
+            options.PageLoadStrategy = PageLoadStrategy.Normal;
 
-            Console.WriteLine("\nsetting up chrome driver");
+            Console.WriteLine("\nstarting chrome driver setup");
             var outputDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             _driver = new ChromeDriver(outputDirectory, options);   
             _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
             _objectContainer.RegisterInstanceAs(_driver);
-
             Console.WriteLine("chrome driver setup complete\n");
         }
 
@@ -55,7 +53,7 @@ namespace SimpleSeleniumFramework
         [AfterScenario]
         public void TearDown()
         {
-            Console.WriteLine("\nquitting webdriver and killing chrome driver");
+            Console.WriteLine("\nkilling both webdriver and chrome driver");
             try
             {
                 _driver.Quit();
@@ -74,7 +72,7 @@ namespace SimpleSeleniumFramework
                     _driver.Quit();
                 }
             }
-            Console.WriteLine("successfully quit webdriver and killed chrome driver\n");
+            Console.WriteLine("killed both webdriver and chrome driver\n");
         }
     }
 }
