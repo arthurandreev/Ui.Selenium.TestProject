@@ -1,7 +1,5 @@
 # SeleniumFrameworkProject
-This is a living project with functionality that will be extended regularly to advance knowledge of latest web testing tools and best practices. 
-
-This is a joint project between myself and @LulzimAhmeti. Both of us are contributors to this project. 
+This is a living project with functionality that will be extended regularly to advance knowledge of latest web testing tools and best practices. This is a collaborative project between myself and @LulzimAhmeti. 
 
 ## MVP:
 - Implement Page Object Model design pattern - DONE
@@ -13,7 +11,7 @@ This is a joint project between myself and @LulzimAhmeti. Both of us are contrib
 ## Possible Extensions:
 - Extend the project to allow for cross browser testing - TODO
 - Host the project on a cloud hosting platform to enable automated nightly test runs in CI/CD pipeline - TODO
-- Extend the project to integrate Selenium Grid into the project to allow parallel running of tests on multiple servers in the cloud - TODO
+- Extend the project to integrate Selenium Grid to enable parallel running of tests on multiple servers in the cloud - TODO
 
 ## Some of the resources used to complete this project:
 - https://www.selenium.dev/selenium/docs/api/dotnet/index.html
