@@ -11,6 +11,8 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
         private readonly string Url = "https://www.bbc.co.uk/sport/my-sport";
         private readonly string Username = "testautomation1011@gmail.com";
         private readonly string Password = "ghBabcdFaq$456$";
+
+        private IWebElement NeedHelpSigningInLink => GetElement(By.XPath("//span[text() = 'Need help signing in?']"));
         private IWebElement OkCookiesButton => GetElement(By.Id("bbcprivacy-continue-button"));
         private IWebElement AcceptCookiesButton => GetElement(By.Id("bbccookies-continue-button"));
         private IWebElement SignInOnLandingPage => GetElement(By.XPath("//*[@id='idcta-link']//span[contains(text(), 'Sign in')]"));
@@ -38,6 +40,7 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
             GoToUrl(Url);
             DismissAlertIfPresent();
             AcceptCookies();
+            Assert.AreEqual(GetUrl(), Url);
         }
 
         public void NavigateToSigninPage()
@@ -52,6 +55,7 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
            FluentWaitForElementToAppear(By.Id("submit-button"), 10, 500);
            EmailTextBox.SendKeys(Username);
            PasswordTextBox.SendKeys(Password);
+           Assert.IsTrue(NeedHelpSigningInLink.Displayed); 
         }
 
         public void ClickToSignin()
@@ -63,8 +67,8 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
         {
             DismissAlertIfPresent();
             FluentWaitForElementToAppear(By.XPath("//*[@id='my-sport']//span[contains(text(), 'Edit My Sport')]"), 20, 500);
-            Assert.IsTrue(EditMySport.Enabled);
             TakeScreenshot();
+            Assert.IsTrue(EditMySport.Enabled);
         }
 
         public void DismissAlertIfPresent()

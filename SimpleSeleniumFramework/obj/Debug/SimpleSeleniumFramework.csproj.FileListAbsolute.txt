@@ -267,3 +267,4 @@ C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleni
 C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\obj\Debug\SimpleSeleniumFramework.csproj.CopyComplete
 C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\obj\Debug\SimpleSeleniumFramework.dll
 C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\obj\Debug\SimpleSeleniumFramework.pdb
+C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\obj\Debug\SimpleSeleniumFramework.csprojAssemblyReference.cache
