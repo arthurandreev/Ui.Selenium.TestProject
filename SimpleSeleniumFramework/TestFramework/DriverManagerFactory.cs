@@ -26,6 +26,7 @@ namespace SimpleSeleniumFramework
             options.AddArguments(
                 "incognito",
                 "--start-maximized"
+               // "headless"
             );
             options.PageLoadStrategy = PageLoadStrategy.Normal;
 
@@ -39,15 +40,23 @@ namespace SimpleSeleniumFramework
 
         public void KillChromeDriver()
         {
-            foreach (var p in Process.GetProcesses())
+            try
             {
-                var name = p.ProcessName.ToLower();
-                if (name == "chromedriver.exe")
+                foreach (var p in Process.GetProcesses())
                 {
-                    Console.WriteLine("killing chromedriver process");
-                    p.Kill();
+                    var name = p.ProcessName.ToLower();
+                    if (name == "chromedriver.exe")
+                    {
+                        Console.WriteLine("killing chromedriver process");
+                        p.Kill();
+                    }
                 }
             }
+            catch (Exception e)
+            {
+                Console.WriteLine($"KillChromeDriver method threw the following exception: {e} and stack trace {e.StackTrace}");
+            }
+           
         }
 
         [AfterScenario]
@@ -62,8 +71,7 @@ namespace SimpleSeleniumFramework
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
-                throw;
+                Console.WriteLine($"TearDown method threw the following exception: {e} and stack trace {e.StackTrace}");
             }
             finally
             {

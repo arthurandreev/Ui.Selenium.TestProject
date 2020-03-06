@@ -39,7 +39,7 @@ namespace SimpleSeleniumFramework.TestFramework
             catch (NoSuchElementException e)
             {
                 Console.WriteLine($"Cannot move to the following element: {element.Text}");
-                Console.WriteLine($"MoveToElement threw the following exception: {e}");
+                Console.WriteLine($"MoveToElement threw the following exception: {e} and stack trace {e.StackTrace}");
                 TakeScreenshot();
             }
         }
@@ -56,7 +56,7 @@ namespace SimpleSeleniumFramework.TestFramework
             catch (Exception e)
             {
                 Console.WriteLine($"Cannot click the following element: {element.Text}");
-                Console.WriteLine($"ClickElement threw the following exception: {e}");
+                Console.WriteLine($"ClickElement threw the following exception: {e} and stack trace {e.StackTrace}");
                 TakeScreenshot();
             }
         }
@@ -96,7 +96,7 @@ namespace SimpleSeleniumFramework.TestFramework
             }
             catch (Exception e)
             {
-                Console.WriteLine($"TakeScreenShot threw the following exception: {e}");
+                Console.WriteLine($"TakeScreenShot threw the following exception: {e} and stack trace {e.StackTrace}");
             }
             
         }

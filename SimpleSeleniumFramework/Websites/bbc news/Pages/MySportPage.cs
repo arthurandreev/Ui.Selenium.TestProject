@@ -13,6 +13,7 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
         private readonly string Password = "ghBabcdFaq$456$";
 
         private IWebElement NeedHelpSigningInLink => GetElement(By.XPath("//span[text() = 'Need help signing in?']"));
+        private IWebElement TakeASurveyButton => GetElement(By.XPath("//*[@id='id_1583534363389_0'][(text() = 'Take survey(opens in a new window)')]"));
         private IWebElement OkCookiesButton => GetElement(By.Id("bbcprivacy-continue-button"));
         private IWebElement AcceptCookiesButton => GetElement(By.Id("bbccookies-continue-button"));
         private IWebElement SignInOnLandingPage => GetElement(By.XPath("//*[@id='idcta-link']//span[contains(text(), 'Sign in')]"));
@@ -64,26 +65,27 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
             DismissAlertIfPresent();
             FluentWaitForElementToAppear(By.XPath("//*[@id='my-sport']//span[contains(text(), 'Edit My Sport')]"), 20, 500);
             TakeScreenshot();
+            DismissAlertIfPresent();
             Assert.IsTrue(EditMySport.Enabled);
         }
 
         public void DismissAlertIfPresent()
         {
-            try
-            {
-               Driver.SwitchTo().Frame("edr_l_first");
-               FluentWaitForElementToAppear(By.XPath("//*[@id='no']//span[(text() = 'No thanks')]"), 10, 500);
-               ClickElement(NoThanksButton);
-               Driver.SwitchTo().DefaultContent();
-            }
-            catch (NoSuchFrameException)
-            {
-                Console.WriteLine("IFrame not present");
-            }
-            catch (NoSuchElementException)
-            {
-                Console.WriteLine("IFrame element not present");
-            }
+                try
+                {
+                    Driver.SwitchTo().Frame("edr_l_first");
+                    FluentWaitForElementToAppear(By.XPath("//*[@id='no']//span[(text() = 'No thanks')]"), 10, 500);
+                    ClickElement(NoThanksButton);
+                    Driver.SwitchTo().DefaultContent();
+                }
+                catch (NoSuchFrameException)
+                {
+                    Console.WriteLine("Alert iframe not present");
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine($"DismissAlert method threw the following excepton: {e} and stack trace {e.StackTrace}");
+                }
+            }            
         }
    }
-}
