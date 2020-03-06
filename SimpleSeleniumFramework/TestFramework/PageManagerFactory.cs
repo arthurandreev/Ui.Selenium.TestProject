@@ -53,10 +53,6 @@ namespace SimpleSeleniumFramework.TestFramework
                 MoveToElement(element);
                 element.Click();
             }
-            catch (ElementNotVisibleException e)
-            {
-                Console.WriteLine(e);
-            }
             catch (Exception e)
             {
                 Console.WriteLine($"Cannot click the following element: {element.Text}");
