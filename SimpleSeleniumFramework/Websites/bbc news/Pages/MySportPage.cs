@@ -11,14 +11,15 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
         private readonly string Url = "https://www.bbc.co.uk/sport/my-sport";
         private readonly string Username = "testautomation1011@gmail.com";
         private readonly string Password = "ghBabcdFaq$456$";
+
+        private IWebElement NeedHelpSigningInLink => GetElement(By.XPath("//span[text() = 'Need help signing in?']"));
         private IWebElement OkCookiesButton => GetElement(By.Id("bbcprivacy-continue-button"));
         private IWebElement AcceptCookiesButton => GetElement(By.Id("bbccookies-continue-button"));
         private IWebElement SignInOnLandingPage => GetElement(By.XPath("//*[@id='idcta-link']//span[contains(text(), 'Sign in')]"));
         private IWebElement SignInButtonOnSigninPage => GetElement(By.Id("submit-button"));
         private IWebElement EmailTextBox => GetElement(By.Id("user-identifier-input"));
         private IWebElement PasswordTextBox => GetElement(By.Id("password-input"));
-        private IWebElement HaveYourSayIFrame => GetElement(By.Id("edr_l_first"));
-        private IWebElement NoThanksButton => GetElement(By.CssSelector("#no"));
+        private IWebElement NoThanksButton => GetElement(By.XPath("//*[@id='no']//span[(text() = 'No thanks')]"));
         private IWebElement EditMySport => GetElement(By.XPath("//*[@id='my-sport']//span[contains(text(), 'Edit My Sport')]"));
         
         public MySportPage(IWebDriver driver, ScenarioContext scenarioContext) : base(driver, scenarioContext) {}
@@ -35,6 +36,7 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
             GoToUrl(Url);
             DismissAlertIfPresent();
             AcceptCookies();
+            Assert.AreEqual(GetUrl(), Url);
         }
 
         public void NavigateToSigninPage()
@@ -49,6 +51,7 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
            FluentWaitForElementToAppear(By.Id("submit-button"), 10, 500);
            EmailTextBox.SendKeys(Username);
            PasswordTextBox.SendKeys(Password);
+           Assert.IsTrue(NeedHelpSigningInLink.Displayed); 
         }
 
         public void ClickToSignin()
@@ -60,16 +63,17 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
         {
             DismissAlertIfPresent();
             FluentWaitForElementToAppear(By.XPath("//*[@id='my-sport']//span[contains(text(), 'Edit My Sport')]"), 20, 500);
-            Assert.IsTrue(EditMySport.Enabled);
             TakeScreenshot();
+            Assert.IsTrue(EditMySport.Enabled);
         }
 
         public void DismissAlertIfPresent()
         {
             try
             {
-               Driver.SwitchTo().Frame(HaveYourSayIFrame);
-               NoThanksButton.Click();
+               Driver.SwitchTo().Frame("edr_l_first");
+               FluentWaitForElementToAppear(By.XPath("//*[@id='no']//span[(text() = 'No thanks')]"), 10, 500);
+               ClickElement(NoThanksButton);
                Driver.SwitchTo().DefaultContent();
             }
             catch (NoSuchFrameException)
