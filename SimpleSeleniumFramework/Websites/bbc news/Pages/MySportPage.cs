@@ -19,7 +19,6 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
         private IWebElement SignInButtonOnSigninPage => GetElement(By.Id("submit-button"));
         private IWebElement EmailTextBox => GetElement(By.Id("user-identifier-input"));
         private IWebElement PasswordTextBox => GetElement(By.Id("password-input"));
-        private IWebElement NoThanksButton => GetElement(By.XPath("//*[@id='no']//span[(text() = 'No thanks')]"));
         private IWebElement EditMySport => GetElement(By.XPath("//*[@id='my-sport']//span[contains(text(), 'Edit My Sport')]"));
         
         public MySportPage(IWebDriver driver, ScenarioContext scenarioContext) : base(driver, scenarioContext) {}
@@ -34,6 +33,7 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
         public void NavigateToMySportPage()
         {
             GoToUrl(Url);
+            DismissAlertWithJS();
             AcceptCookies();
             Assert.AreEqual(GetUrl(), Url);
         }
@@ -45,7 +45,8 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
         }
 
         public void EnterUsernameAndPassword()
-        {    
+        {
+            DismissAlertWithJS();
             FluentWaitForElementToAppear(By.Id("submit-button"), 10, 500);
             EmailTextBox.SendKeys(Username);
             PasswordTextBox.SendKeys(Password);
@@ -59,28 +60,10 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
 
         public void ValidateMyBbcSportsNewsPage()
         {
+            DismissAlertWithJS();
             FluentWaitForElementToAppear(By.XPath("//*[@id='my-sport']//span[contains(text(), 'Edit My Sport')]"), 20, 500);
             TakeScreenshot();
             Assert.IsTrue(EditMySport.Enabled);      
         }
-
-        public void DismissAlert()
-        {
-                try
-                {
-                    Driver.SwitchTo().Frame("edr_l_first");
-                    FluentWaitForElementToAppear(By.XPath("//*[@id='no']//span[(text() = 'No thanks')]"), 10, 500);
-                    ClickElement(NoThanksButton);
-                    Driver.SwitchTo().DefaultContent();
-                }
-                catch (NoSuchFrameException)
-                {
-                    Console.WriteLine("Alert iframe not present");
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine($"DismissAlert method threw the following excepton: {e} and stack trace {e.StackTrace}");
-                }
-            }
-      }
    }
+}

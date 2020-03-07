@@ -100,5 +100,11 @@ namespace SimpleSeleniumFramework.TestFramework
             }
             
         }
+
+        protected void DismissAlertWithJS()
+        {
+            IJavaScriptExecutor executor = (IJavaScriptExecutor)Driver;
+            executor.ExecuteScript("window.alert = function () { return true}");
+        }
     }
 }
