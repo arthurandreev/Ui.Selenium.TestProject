@@ -32,7 +32,7 @@ namespace SimpleSeleniumFramework
             Console.WriteLine("\nstarting chrome driver setup");
             var outputDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             _driver = new ChromeDriver(outputDirectory, options);   
-            _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
+            _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
             _objectContainer.RegisterInstanceAs(_driver);
             Console.WriteLine("chrome driver setup complete\n");
         }
