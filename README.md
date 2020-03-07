@@ -19,6 +19,7 @@ This is a living project with functionality that will be extended regularly to a
 - https://specflow.org/documentation/
 - https://ultimateqa.com/common-selenium-webdriver-errors-fix/
 - https://ui.vision/rpa/docs/selenium-ide
+- https://devhints.io/xpath
 
 
 
