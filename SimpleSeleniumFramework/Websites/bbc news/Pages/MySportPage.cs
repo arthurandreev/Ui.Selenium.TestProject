@@ -65,7 +65,6 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
             DismissAlertIfPresent();
             FluentWaitForElementToAppear(By.XPath("//*[@id='my-sport']//span[contains(text(), 'Edit My Sport')]"), 20, 500);
             TakeScreenshot();
-            DismissAlertIfPresent();
             Assert.IsTrue(EditMySport.Enabled);
         }
 

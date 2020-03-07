@@ -38,27 +38,6 @@ namespace SimpleSeleniumFramework
             Console.WriteLine("chrome driver setup complete\n");
         }
 
-        public void KillChromeDriver()
-        {
-            try
-            {
-                foreach (var p in Process.GetProcesses())
-                {
-                    var name = p.ProcessName.ToLower();
-                    if (name == "chromedriver.exe")
-                    {
-                        Console.WriteLine("killing chromedriver process");
-                        p.Kill();
-                    }
-                }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine($"KillChromeDriver method threw the following exception: {e} and stack trace {e.StackTrace}");
-            }
-           
-        }
-
         [AfterScenario]
         public void TearDown()
         {
@@ -81,6 +60,27 @@ namespace SimpleSeleniumFramework
                 }
             }
             Console.WriteLine("killed both webdriver and chrome driver\n");
+        }
+
+        public void KillChromeDriver()
+        {
+            try
+            {
+                foreach (var p in Process.GetProcesses())
+                {
+                    var name = p.ProcessName.ToLower();
+                    if (name == "chromedriver.exe")
+                    {
+                        Console.WriteLine("killing chromedriver process");
+                        p.Kill();
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"KillChromeDriver method threw the following exception: {e} and stack trace {e.StackTrace}");
+            }
+
         }
     }
 }
