@@ -13,7 +13,7 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
         private readonly string Password = "ghBabcdFaq$456$";
 
         private IWebElement NeedHelpSigningInLink => GetElement(By.XPath("//span[text() = 'Need help signing in?']"));
-        private IWebElement TakeASurveyButton => GetElement(By.XPath("//*[@id='id_1583534363389_0'][(text() = 'Take survey(opens in a new window)')]"));
+        private IWebElement HaveYourSayAlert => GetElement(By.CssSelector("#title"));
         private IWebElement OkCookiesButton => GetElement(By.Id("bbcprivacy-continue-button"));
         private IWebElement AcceptCookiesButton => GetElement(By.Id("bbccookies-continue-button"));
         private IWebElement SignInOnLandingPage => GetElement(By.XPath("//*[@id='idcta-link']//span[contains(text(), 'Sign in')]"));
@@ -26,49 +26,72 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
         public MySportPage(IWebDriver driver, ScenarioContext scenarioContext) : base(driver, scenarioContext) {}
         public void AcceptCookies()
         {
-            FluentWaitForElementToAppear(By.Id("bbcprivacy-continue-button"), 10, 500);
-            ClickElement(OkCookiesButton);
-            FluentWaitForElementToAppear(By.Id("bbccookies-continue-button"), 10, 500);
-            ClickElement(AcceptCookiesButton);
+             FluentWaitForElementToAppear(By.Id("bbcprivacy-continue-button"), 10, 500);
+             ClickElement(OkCookiesButton);
+             FluentWaitForElementToAppear(By.Id("bbccookies-continue-button"), 10, 500);
+             ClickElement(AcceptCookiesButton);
+               
         }
 
         public void NavigateToMySportPage()
         {
-            GoToUrl(Url);
-            DismissAlertIfPresent();
-            AcceptCookies();
-            Assert.AreEqual(GetUrl(), Url);
+            if (IsAlertPresent())
+            {
+                DismissAlert();
+            }
+    
+             GoToUrl(Url);
+             AcceptCookies();
+             Assert.AreEqual(GetUrl(), Url);
         }
 
         public void NavigateToSigninPage()
         {
-            FluentWaitForElementToAppear(By.XPath("//*[contains(text(), 'Sign in')]"), 10, 500);
-            ClickElement(SignInOnLandingPage);          
+            if (IsAlertPresent())
+            {
+                DismissAlert();
+            }
+      
+             FluentWaitForElementToAppear(By.XPath("//*[contains(text(), 'Sign in')]"), 10, 500);
+             ClickElement(SignInOnLandingPage);      
         }
 
         public void EnterUsernameAndPassword()
         {
-           DismissAlertIfPresent();
-           FluentWaitForElementToAppear(By.Id("submit-button"), 10, 500);
-           EmailTextBox.SendKeys(Username);
-           PasswordTextBox.SendKeys(Password);
-           Assert.IsTrue(NeedHelpSigningInLink.Displayed); 
+            if (IsAlertPresent())
+            {
+                DismissAlert();
+            }
+      
+             FluentWaitForElementToAppear(By.Id("submit-button"), 10, 500);
+             EmailTextBox.SendKeys(Username);
+             PasswordTextBox.SendKeys(Password);
+             Assert.IsTrue(NeedHelpSigningInLink.Displayed);
         }
 
         public void ClickToSignin()
         {
+            if (IsAlertPresent())
+            {
+                DismissAlert();
+            }
+
             ClickElement(SignInButtonOnSigninPage);
         }
 
         public void ValidateMyBbcSportsNewsPage()
         {
-            DismissAlertIfPresent();
+            if (IsAlertPresent())
+            {
+                DismissAlert();
+            }
+
             FluentWaitForElementToAppear(By.XPath("//*[@id='my-sport']//span[contains(text(), 'Edit My Sport')]"), 20, 500);
             TakeScreenshot();
-            Assert.IsTrue(EditMySport.Enabled);
+            Assert.IsTrue(EditMySport.Enabled);      
         }
 
-        public void DismissAlertIfPresent()
+        public void DismissAlert()
         {
                 try
                 {
@@ -85,6 +108,23 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
                 {
                     Console.WriteLine($"DismissAlert method threw the following excepton: {e} and stack trace {e.StackTrace}");
                 }
-            }            
+            }
+        
+        public bool IsAlertPresent()
+        {
+            bool alertPresent = false;
+            try
+            {
+                if (HaveYourSayAlert.Displayed)
+                {
+                    alertPresent = true;
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"IsAlertPresent method threw the following excepton: {e} and stack trace {e.StackTrace}");
+            }
+            return alertPresent;
         }
+      }
    }

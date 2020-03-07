@@ -19,8 +19,8 @@ namespace SimpleSeleniumFramework.Bin.Debug.Websites.BbcNews.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.1.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("PersonalAccount", Description="As a user, \r\nI want to sign into my bbc account, \r\nSo that I can view bbc sports " +
-        "content personalised to me", SourceFile="bin\\Debug\\Websites\\bbc news\\Features\\PersonalAccount.feature", SourceLine=0)]
+    [TechTalk.SpecRun.FeatureAttribute("PersonalAccount", Description="As a user, \r\nI want to sign into my bbc account, \r\nSo that I can personalise bbc " +
+        "sports content to my preference", SourceFile="bin\\Debug\\Websites\\bbc news\\Features\\PersonalAccount.feature", SourceLine=0)]
     public partial class PersonalAccountFeature
     {
         
@@ -35,8 +35,8 @@ namespace SimpleSeleniumFramework.Bin.Debug.Websites.BbcNews.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "PersonalAccount", "As a user, \r\nI want to sign into my bbc account, \r\nSo that I can view bbc sports " +
-                    "content personalised to me", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "PersonalAccount", "As a user, \r\nI want to sign into my bbc account, \r\nSo that I can personalise bbc " +
+                    "sports content to my preference", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -113,7 +113,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("I sign in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 12
- testRunner.Then("I expect my bbc sports news to enable me to edit my topic selection", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I expect to see the option to personalise my bbc sports content", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
