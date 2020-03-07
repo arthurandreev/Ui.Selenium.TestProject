@@ -9,4 +9,4 @@ Scenario: Sign-in to access personalised sports page
 	When I navigate to signin page
 	And I enter correct username and password
 	And I sign in successfully
-	Then I expect my bbc sports news to enable me to edit my topic selection
+	Then I expect to see the option to personalise my bbc sports topics
