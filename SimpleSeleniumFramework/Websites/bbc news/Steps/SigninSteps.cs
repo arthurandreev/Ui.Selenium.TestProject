@@ -37,8 +37,8 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Steps
             _mySportPage.ClickToSignin();
         }
 
-        [Then(@"I expect my bbc sports news to enable me to edit my topic selection")]
-        public void ThenIExpectMyBbcSportsNewsToEnableMeToEditMyTopicSelection()
+        [Then(@"I expect to see the option to personalise my bbc sports content")]
+        public void ThenIExpectToSeeTheOptionToPersonaliseMyBbcSportsContent()
         {
             _mySportPage.ValidateMyBbcSportsNewsPage();
         }

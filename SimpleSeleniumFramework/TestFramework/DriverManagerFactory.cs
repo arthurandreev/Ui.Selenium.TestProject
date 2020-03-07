@@ -26,6 +26,7 @@ namespace SimpleSeleniumFramework
             options.AddArguments(
                 "incognito",
                 "--start-maximized"
+               // "headless"
             );
             options.PageLoadStrategy = PageLoadStrategy.Normal;
 
@@ -35,19 +36,6 @@ namespace SimpleSeleniumFramework
             _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
             _objectContainer.RegisterInstanceAs(_driver);
             Console.WriteLine("chrome driver setup complete\n");
-        }
-
-        public void KillChromeDriver()
-        {
-            foreach (var p in Process.GetProcesses())
-            {
-                var name = p.ProcessName.ToLower();
-                if (name == "chromedriver.exe")
-                {
-                    Console.WriteLine("killing chromedriver process");
-                    p.Kill();
-                }
-            }
         }
 
         [AfterScenario]
@@ -62,8 +50,7 @@ namespace SimpleSeleniumFramework
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
-                throw;
+                Console.WriteLine($"TearDown method threw the following exception: {e} and stack trace {e.StackTrace}");
             }
             finally
             {
@@ -73,6 +60,27 @@ namespace SimpleSeleniumFramework
                 }
             }
             Console.WriteLine("killed both webdriver and chrome driver\n");
+        }
+
+        public void KillChromeDriver()
+        {
+            try
+            {
+                foreach (var p in Process.GetProcesses())
+                {
+                    var name = p.ProcessName.ToLower();
+                    if (name == "chromedriver.exe")
+                    {
+                        Console.WriteLine("killing chromedriver process");
+                        p.Kill();
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"KillChromeDriver method threw the following exception: {e} and stack trace {e.StackTrace}");
+            }
+
         }
     }
 }

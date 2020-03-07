@@ -22,22 +22,18 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
         private IWebElement NoThanksButton => GetElement(By.XPath("//*[@id='no']//span[(text() = 'No thanks')]"));
         private IWebElement EditMySport => GetElement(By.XPath("//*[@id='my-sport']//span[contains(text(), 'Edit My Sport')]"));
         
-        public MySportPage(IWebDriver driver, ScenarioContext scenarioContext) : base(driver, scenarioContext)
-        {
-        }
-
+        public MySportPage(IWebDriver driver, ScenarioContext scenarioContext) : base(driver, scenarioContext) {}
         public void AcceptCookies()
         {
             FluentWaitForElementToAppear(By.Id("bbcprivacy-continue-button"), 10, 500);
             ClickElement(OkCookiesButton);
             FluentWaitForElementToAppear(By.Id("bbccookies-continue-button"), 10, 500);
-            ClickElement(AcceptCookiesButton);
+            ClickElement(AcceptCookiesButton);              
         }
 
         public void NavigateToMySportPage()
         {
             GoToUrl(Url);
-            DismissAlertIfPresent();
             AcceptCookies();
             Assert.AreEqual(GetUrl(), Url);
         }
@@ -45,16 +41,15 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
         public void NavigateToSigninPage()
         {
             FluentWaitForElementToAppear(By.XPath("//*[contains(text(), 'Sign in')]"), 10, 500);
-            ClickElement(SignInOnLandingPage);          
+            ClickElement(SignInOnLandingPage);      
         }
 
         public void EnterUsernameAndPassword()
-        {
-           DismissAlertIfPresent();
-           FluentWaitForElementToAppear(By.Id("submit-button"), 10, 500);
-           EmailTextBox.SendKeys(Username);
-           PasswordTextBox.SendKeys(Password);
-           Assert.IsTrue(NeedHelpSigningInLink.Displayed); 
+        {    
+            FluentWaitForElementToAppear(By.Id("submit-button"), 10, 500);
+            EmailTextBox.SendKeys(Username);
+            PasswordTextBox.SendKeys(Password);
+            Assert.IsTrue(NeedHelpSigningInLink.Displayed);
         }
 
         public void ClickToSignin()
@@ -64,29 +59,28 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
 
         public void ValidateMyBbcSportsNewsPage()
         {
-            DismissAlertIfPresent();
             FluentWaitForElementToAppear(By.XPath("//*[@id='my-sport']//span[contains(text(), 'Edit My Sport')]"), 20, 500);
             TakeScreenshot();
-            Assert.IsTrue(EditMySport.Enabled);
+            Assert.IsTrue(EditMySport.Enabled);      
         }
 
-        public void DismissAlertIfPresent()
+        public void DismissAlert()
         {
-            try
-            {
-               Driver.SwitchTo().Frame("edr_l_first");
-               FluentWaitForElementToAppear(By.XPath("//*[@id='no']//span[(text() = 'No thanks')]"), 10, 500);
-               ClickElement(NoThanksButton);
-               Driver.SwitchTo().DefaultContent();
+                try
+                {
+                    Driver.SwitchTo().Frame("edr_l_first");
+                    FluentWaitForElementToAppear(By.XPath("//*[@id='no']//span[(text() = 'No thanks')]"), 10, 500);
+                    ClickElement(NoThanksButton);
+                    Driver.SwitchTo().DefaultContent();
+                }
+                catch (NoSuchFrameException)
+                {
+                    Console.WriteLine("Alert iframe not present");
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine($"DismissAlert method threw the following excepton: {e} and stack trace {e.StackTrace}");
+                }
             }
-            catch (NoSuchFrameException)
-            {
-                Console.WriteLine("IFrame not present");
-            }
-            catch (NoSuchElementException)
-            {
-                Console.WriteLine("IFrame element not present");
-            }
-        }
+      }
    }
-}
