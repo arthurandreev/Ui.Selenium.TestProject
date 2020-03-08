@@ -103,8 +103,8 @@ namespace SimpleSeleniumFramework.TestFramework
 
         protected void DismissAlertWithJS()
         {
-            IJavaScriptExecutor executor = (IJavaScriptExecutor)Driver;
-            executor.ExecuteScript("window.alert = function () { return true}");
+            IJavaScriptExecutor js = (IJavaScriptExecutor)Driver;
+            js.ExecuteScript("window.prompt = function () { return true }");
         }
     }
 }
