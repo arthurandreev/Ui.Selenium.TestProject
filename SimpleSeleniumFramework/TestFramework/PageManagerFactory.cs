@@ -83,7 +83,7 @@ namespace SimpleSeleniumFramework.TestFramework
             fluentWait.Until(x => (x.FindElements(by).Count == 0));
         }
 
-        //TODO: change hardcoded filepath to project directory
+        //TODO: change hardcoded filepath to local project directory
         protected void TakeScreenshot()
         {
             try
