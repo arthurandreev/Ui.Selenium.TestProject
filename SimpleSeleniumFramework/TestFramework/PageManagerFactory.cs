@@ -83,7 +83,7 @@ namespace SimpleSeleniumFramework.TestFramework
             fluentWait.Until(x => (x.FindElements(by).Count == 0));
         }
 
-        //TODO: change hardcoded filepath to project directory
+        //TODO: change hardcoded filepath to local project directory
         protected void TakeScreenshot()
         {
             try
@@ -103,8 +103,8 @@ namespace SimpleSeleniumFramework.TestFramework
 
         protected void DismissAlertWithJS()
         {
-            IJavaScriptExecutor executor = (IJavaScriptExecutor)Driver;
-            executor.ExecuteScript("window.alert = function () { return true}");
+            IJavaScriptExecutor js = (IJavaScriptExecutor)Driver;
+            js.ExecuteScript("window.prompt = function () { return true }");
         }
     }
 }
