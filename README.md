@@ -6,7 +6,9 @@ This is a living project with functionality that will be extended regularly to a
 - Integrate Specflow into project - DONE
 - Have test setup and test teardown that are run before and after each scenario - DONE
 - Add screenshot taking capability to screenshot NoSuchElementException events for enhanced debugging - DONE
-- Have one specflow feature with at least 2 scenarios - WIP
+- Add Personal Account feature - DONE
+- Implement Sing-in scenario - DONE
+_ Implement Add topics scenario - WIP
 
 ## Possible Extensions:
 - Extend the project to allow for cross browser testing - TODO
