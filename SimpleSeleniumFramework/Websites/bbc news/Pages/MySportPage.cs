@@ -11,7 +11,6 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
         private readonly string Url = "https://www.bbc.co.uk/sport/my-sport";
         private readonly string Username = "testautomation1011@gmail.com";
         private readonly string Password = "ghBabcdFaq$456$";
-
         private IWebElement NeedHelpSigningInLink => GetElement(By.XPath("//span[text() = 'Need help signing in?']"));
         private IWebElement OkCookiesButton => GetElement(By.Id("bbcprivacy-continue-button"));
         private IWebElement AcceptCookiesButton => GetElement(By.Id("bbccookies-continue-button"));
