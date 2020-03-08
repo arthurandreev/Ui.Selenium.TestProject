@@ -1,0 +1,130 @@
+﻿2020-03-08T12:49:46.6611980+00:00;VSTestExecutionThread;Info;SpecFlow+Runner execution started
+2020-03-08T12:49:46.6611980+00:00;VSTestExecutionThread;Info;SpecFlow+Runner 3.1.48 in Framework clr40 in x86 mode execution started
+2020-03-08T12:49:46.6611980+00:00;VSTestExecutionThread;Info;TestAdapter Location: C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\TechTalk.SpecRun.VisualStudio.TestAdapter.dll
+2020-03-08T12:49:46.6982033+00:00;VSTestExecutionThread;Info;SpecRun: running tests in C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\SimpleSeleniumFramework.dll
+2020-03-08T12:49:46.6992048+00:00;VSTestExecutionThread;Info;Output folder configured to "C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\TestResults" (default)
+2020-03-08T12:49:46.6992048+00:00;VSTestExecutionThread;Info;Profile: 
+2020-03-08T12:49:46.8202011+00:00;VSTestExecutionThread;Info;Log file path: C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\TestResults\Unnamed project__2020-03-08T124946.log
+2020-03-08T12:49:46.8501989+00:00;VSTestExecutionThread;Info;SpecFlow+Runner Evaluation Mode: Please purchase at http://www.specflow.org/plus to remove test execution delay.
+2020-03-08T12:49:46.8612019+00:00;Thread#15;Info;Checking license
+2020-03-08T12:49:47.0772139+00:00;Thread#15;Info;Evaluation mode: test execution starts in 10 seconds... (this delay is removed in the registered version)
+2020-03-08T12:49:57.0784483+00:00;Thread#15;Info;Evaluation delay finished.
+2020-03-08T12:49:57.0852089+00:00;Thread#15;Info;License check completed
+2020-03-08T12:49:57.0861979+00:00;Thread#15;Info;starting test run
+2020-03-08T12:49:57.0993375+00:00;Thread#15;Info;Discovering target: Default
+2020-03-08T12:49:57.1001987+00:00;Thread#15;Info;Discovering tests from assembly: C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\SimpleSeleniumFramework.dll
+2020-03-08T12:49:57.2162674+00:00;Thread#15;Info;Discovered tests from assembly: C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\SimpleSeleniumFramework.dll
+2020-03-08T12:49:57.2172027+00:00:Test Suite Dump
+2020-03-08T12:49:57.2212217+00:00:#0: Unnamed project/ - 
+2020-03-08T12:49:57.2212217+00:00:#1: Default - 
+2020-03-08T12:49:57.2212217+00:00:#2: SimpleSeleniumFramework - 
+2020-03-08T12:49:57.2212217+00:00:#3: PersonalAccount - 
+2020-03-08T12:49:57.2212217+00:00:#5: PersonalAccount - 
+2020-03-08T12:49:57.4681963+00:00:#4: Sign-in to access personalised sports page - TestAssembly:SimpleSeleniumFramework/Feature:PersonalAccount/Scenario:Sign-in+to+access+personalised+sports+page
+2020-03-08T12:49:57.4691953+00:00:#6: Sign-in to access personalised sports page - TestAssembly:SimpleSeleniumFramework/Feature:PersonalAccount/Scenario:Sign-in+to+access+personalised+sports+page
+2020-03-08T12:49:57.4691953+00:00:End: Test Suite Dump
+2020-03-08T12:49:57.4962066+00:00:Thread#0:Scheduler: get next test for thread 0
+2020-03-08T12:49:57.4992164+00:00:Thread#:Scheduler: testitem #4 from normal test queue 
+2020-03-08T12:49:57.4992164+00:00:Thread#0:Scheduler: considering testitem #4 for thread 0
+2020-03-08T12:49:57.5042069+00:00:Thread#0:TestItem#4:testItemMatchesCurrentTestThread:UnSpecific
+2020-03-08T12:49:57.5042069+00:00:Thread#0:TestItem#4:runsOnOneOtherThreadSpecific:False
+2020-03-08T12:49:57.5052753+00:00:Thread#0:TestItem#4:runsOnOneOtherThreadUnspecific:False
+2020-03-08T12:49:57.5052753+00:00:Thread#0:Scheduler: using testitem #4 for thread 0
+2020-03-08T12:49:57.5064269+00:00:Thread#0:Scheduler: Test #4 is scheduled for thread
+2020-03-08T12:49:57.5072676+00:00:Thread#0:Scheduler: with testItemExecutionIndex 0
+2020-03-08T12:49:57.5113282+00:00:Thread #0: creating new test thread executor for SimpleSeleniumFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null (target: Default)
+2020-03-08T12:49:57.5133260+00:00:Thread #0: Creating test assembly executor for execution model AppDomain
+2020-03-08T12:49:57.5151993+00:00:Thread #0: Creating test assembly executor for execution model AppDomain
+2020-03-08T12:49:57.5175893+00:00:Thread #0: using TechTalk.SpecRun.Framework.Execution.InProcess.InProcAppDomainTestAssemblyExecutorHost to execute tests
+2020-03-08T12:49:57.8472642+00:00:Thread#0:T:-> Loading plugin C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\SpecRun.Runtime.SpecFlowPlugin.dll
+2020-03-08T12:49:57.8563303+00:00:Thread#0:T:-> Using default config
+2020-03-08T12:49:58.7572011+00:00:Thread#0: Test #4/0 is started on thread #0
+2020-03-08T12:49:58.9151988+00:00:Thread#0:T:starting chrome driver setup
+2020-03-08T12:50:05.9441997+00:00:Thread#0:T:chrome driver setup complete
+2020-03-08T12:50:05.9512068+00:00:Thread#0:B:Given I am on bbc sports page
+2020-03-08T12:50:10.6722016+00:00:Thread#0:T:done: SigninSteps.GivenIamOnBbcSportsPage() (4.7s)
+2020-03-08T12:50:10.6943952+00:00:Thread#0:B:When I navigate to signin page
+2020-03-08T12:50:13.9922074+00:00:Thread#0:T:done: SigninSteps.WhenINavigateToSigninPage() (3.3s)
+2020-03-08T12:50:13.9992193+00:00:Thread#0:B:And I enter correct username and password
+2020-03-08T12:50:16.6322089+00:00:Thread#0:T:done: SigninSteps.AndEnterCorrectUsernameAndPassword() (2.6s)
+2020-03-08T12:50:16.6342041+00:00:Thread#0:B:And I sign in successfully
+2020-03-08T12:50:23.9162004+00:00:Thread#0:T:done: SigninSteps.AndISignInSuccessfully() (7.3s)
+2020-03-08T12:50:23.9182022+00:00:Thread#0:B:Then I expect to see the option to personalise my bbc sports content
+2020-03-08T12:50:24.9701974+00:00:Thread#0:T:TakeScreenShot threw the following exception: System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Users\arthurandreev\source\repos\SeleniumFrameworkProject\Screenshots\Sign-in to access personalised sports page2020-03-08-12_50_24.jpeg'.
+2020-03-08T12:50:24.9711970+00:00:Thread#0:T:   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+2020-03-08T12:50:24.9721957+00:00:Thread#0:T:   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+2020-03-08T12:50:24.9731982+00:00:Thread#0:T:   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)
+2020-03-08T12:50:24.9731982+00:00:Thread#0:T:   at System.IO.FileStream..ctor(String path, FileMode mode)
+2020-03-08T12:50:24.9741953+00:00:Thread#0:T:   at OpenQA.Selenium.Screenshot.SaveAsFile(String fileName, ScreenshotImageFormat format)
+2020-03-08T12:50:24.9762048+00:00:Thread#0:T:   at SimpleSeleniumFramework.TestFramework.PageManagerFactory.TakeScreenshot() in C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\TestFramework\PageManagerFactory.cs:line 95 and stack trace    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+2020-03-08T12:50:24.9762048+00:00:Thread#0:T:   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+2020-03-08T12:50:24.9782221+00:00:Thread#0:T:   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)
+2020-03-08T12:50:24.9791999+00:00:Thread#0:T:   at System.IO.FileStream..ctor(String path, FileMode mode)
+2020-03-08T12:50:24.9811986+00:00:Thread#0:T:   at OpenQA.Selenium.Screenshot.SaveAsFile(String fileName, ScreenshotImageFormat format)
+2020-03-08T12:50:24.9821962+00:00:Thread#0:T:   at SimpleSeleniumFramework.TestFramework.PageManagerFactory.TakeScreenshot() in C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\TestFramework\PageManagerFactory.cs:line 95
+2020-03-08T12:50:25.0121991+00:00:Thread#0:T:done: SigninSteps.ThenIExpectToSeeTheOptionToPersonaliseMyBbcSportsContent() (1.1s)
+2020-03-08T12:50:25.0442000+00:00:Thread#0:Scheduler: get next test for thread 0
+2020-03-08T12:50:25.0442000+00:00:Thread#:Scheduler: testitem #6 from normal test queue 
+2020-03-08T12:50:25.0442000+00:00:Thread#0:Scheduler: considering testitem #6 for thread 0
+2020-03-08T12:50:25.0452002+00:00:Thread#0:TestItem#6:testItemMatchesCurrentTestThread:UnSpecific
+2020-03-08T12:50:25.0452002+00:00:Thread#0:TestItem#6:runsOnOneOtherThreadSpecific:False
+2020-03-08T12:50:25.0452002+00:00:Thread#0:TestItem#6:runsOnOneOtherThreadUnspecific:False
+2020-03-08T12:50:25.0452002+00:00:Thread#0:Scheduler: using testitem #6 for thread 0
+2020-03-08T12:50:25.0452002+00:00:Thread#0:Scheduler: Test #6 is scheduled for thread
+2020-03-08T12:50:25.0452002+00:00:Thread#0:Scheduler: with testItemExecutionIndex 0
+2020-03-08T12:50:25.0482007+00:00:Thread#0:T:killing both webdriver and chrome driver
+2020-03-08T12:50:33.9383000+00:00:Thread#0:T:killed both webdriver and chrome driver
+2020-03-08T12:50:33.9562463+00:00:Thread#0: Test #4/0 is finished on thread #0 as Succeeded within 35.1970473 seconds
+2020-03-08T12:50:33.9602023+00:00:Thread#0: Test #6/0 is started on thread #0
+2020-03-08T12:50:33.9633802+00:00:Thread#0:T:starting chrome driver setup
+2020-03-08T12:50:39.3982003+00:00:Thread#0:T:chrome driver setup complete
+2020-03-08T12:50:39.3992785+00:00:Thread#0:B:Given I am on bbc sports page
+2020-03-08T12:50:44.7482037+00:00:Thread#0:T:done: SigninSteps.GivenIamOnBbcSportsPage() (5.3s)
+2020-03-08T12:50:44.7482037+00:00:Thread#0:B:When I navigate to signin page
+2020-03-08T12:50:48.9582007+00:00:Thread#0:T:done: SigninSteps.WhenINavigateToSigninPage() (4.2s)
+2020-03-08T12:50:48.9592033+00:00:Thread#0:B:And I enter correct username and password
+2020-03-08T12:50:52.0702040+00:00:Thread#0:T:done: SigninSteps.AndEnterCorrectUsernameAndPassword() (3.1s)
+2020-03-08T12:50:52.0712007+00:00:Thread#0:B:And I sign in successfully
+2020-03-08T12:50:59.5702208+00:00:Thread#0:T:done: SigninSteps.AndISignInSuccessfully() (7.5s)
+2020-03-08T12:50:59.5722678+00:00:Thread#0:B:Then I expect to see the option to personalise my bbc sports content
+2020-03-08T12:51:01.8372012+00:00:Thread#0:T:TakeScreenShot threw the following exception: System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Users\arthurandreev\source\repos\SeleniumFrameworkProject\Screenshots\Sign-in to access personalised sports page2020-03-08-12_51_01.jpeg'.
+2020-03-08T12:51:01.8381970+00:00:Thread#0:T:   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+2020-03-08T12:51:01.8402006+00:00:Thread#0:T:   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+2020-03-08T12:51:01.8412017+00:00:Thread#0:T:   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)
+2020-03-08T12:51:01.8432049+00:00:Thread#0:T:   at System.IO.FileStream..ctor(String path, FileMode mode)
+2020-03-08T12:51:01.8452063+00:00:Thread#0:T:   at OpenQA.Selenium.Screenshot.SaveAsFile(String fileName, ScreenshotImageFormat format)
+2020-03-08T12:51:01.8462015+00:00:Thread#0:T:   at SimpleSeleniumFramework.TestFramework.PageManagerFactory.TakeScreenshot() in C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\TestFramework\PageManagerFactory.cs:line 95 and stack trace    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+2020-03-08T12:51:01.8472047+00:00:Thread#0:T:   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+2020-03-08T12:51:01.8482015+00:00:Thread#0:T:   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)
+2020-03-08T12:51:01.8492003+00:00:Thread#0:T:   at System.IO.FileStream..ctor(String path, FileMode mode)
+2020-03-08T12:51:01.8502076+00:00:Thread#0:T:   at OpenQA.Selenium.Screenshot.SaveAsFile(String fileName, ScreenshotImageFormat format)
+2020-03-08T12:51:01.8551966+00:00:Thread#0:T:   at SimpleSeleniumFramework.TestFramework.PageManagerFactory.TakeScreenshot() in C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\TestFramework\PageManagerFactory.cs:line 95
+2020-03-08T12:51:01.8862043+00:00:Thread#0:T:done: SigninSteps.ThenIExpectToSeeTheOptionToPersonaliseMyBbcSportsContent() (2.3s)
+2020-03-08T12:51:01.8882026+00:00:Thread#0:Scheduler: get next test for thread 0
+2020-03-08T12:51:01.8882026+00:00:Thread#:Scheduler: at the end of normal test queue
+2020-03-08T12:51:01.8882026+00:00:Thread#0:Scheduler: enumerator for thread is at end
+2020-03-08T12:51:01.8882026+00:00:Thread#0:Scheduler: No more tests for thread
+2020-03-08T12:51:01.8901994+00:00:Thread#0:T:killing both webdriver and chrome driver
+2020-03-08T12:51:10.6183665+00:00:Thread#0:T:killed both webdriver and chrome driver
+2020-03-08T12:51:10.6423364+00:00:Thread#0: Test #6/0 is finished on thread #0 as Succeeded within 36.6821341 seconds
+2020-03-08T12:51:10.7122226+00:00:Trying to cancel thread
+2020-03-08T12:51:10.7122226+00:00:Thread cancelled
+2020-03-08T12:51:10.7222112+00:00:Thread#-1:Scheduler: get next test for thread -1
+2020-03-08T12:51:10.7222112+00:00:Thread#:Scheduler: at the end of normal test queue
+2020-03-08T12:51:10.7222112+00:00:Thread#-1:Scheduler: enumerator for thread is at end
+2020-03-08T12:51:10.7272058+00:00;Thread#15;Info;test run finished
+2020-03-08T12:51:10.7272058+00:00;Thread#15;Info;publishing test results
+2020-03-08T12:51:11.7312058+00:00;Thread#15;Info;test results published
+2020-03-08T12:51:11.7312058+00:00;Thread#15;Info;generating reports
+2020-03-08T12:51:12.1674068+00:00;Thread#15;Info;Starting external report generation process
+2020-03-08T12:51:17.1891981+00:00;Thread#15;Info;Successfully generated reports.
+2020-03-08T12:51:17.1922007+00:00;Thread#15;Info;Successfully generated reports
+2020-03-08T12:51:17.2042005+00:00:Total: 2
+2020-03-08T12:51:17.2062066+00:00:Succeeded: 2
+2020-03-08T12:51:17.2062066+00:00:Ignored: 0
+2020-03-08T12:51:17.2072167+00:00:Pending: 0
+2020-03-08T12:51:17.2072167+00:00:Skipped: 0
+2020-03-08T12:51:17.2072167+00:00:Failed: 0
+2020-03-08T12:51:17.2201991+00:00;VSTestExecutionThread;Info;Adding attachments to VSTest
+2020-03-08T12:51:17.2201991+00:00;VSTestExecutionThread;Info;adding Test Execution Report 'C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\TestResults\Unnamed project__2020-03-08T124946.html'
+========== End of log file ==========

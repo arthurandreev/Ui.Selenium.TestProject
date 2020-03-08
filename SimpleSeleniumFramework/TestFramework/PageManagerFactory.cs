@@ -3,6 +3,7 @@ using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using TechTalk.SpecFlow;
 
 namespace SimpleSeleniumFramework.TestFramework
@@ -83,7 +84,6 @@ namespace SimpleSeleniumFramework.TestFramework
             fluentWait.Until(x => (x.FindElements(by).Count == 0));
         }
 
-        //TODO: change hardcoded filepath to local project directory
         protected void TakeScreenshot()
         {
             try
@@ -91,7 +91,8 @@ namespace SimpleSeleniumFramework.TestFramework
                 Screenshot screenShot = ((ITakesScreenshot)Driver).GetScreenshot();
                 string title = ScenarioContext.ScenarioInfo.Title;
                 string screenShotName = title + DateTime.Now.ToString("yyyy-MM-dd-HH_mm_ss");
-                string filePathAndName = "C:\\Users\\arthurandreev\\source\\repos\\SeleniumFrameworkProject\\Screenshots\\" + screenShotName + ".jpeg";
+                string testResultsFolder = Directory.GetCurrentDirectory();
+                string filePathAndName = testResultsFolder + "\\" + screenShotName + ".jpeg";
                 screenShot.SaveAsFile(filePathAndName, ScreenshotImageFormat.Jpeg);
             }
             catch (Exception e)

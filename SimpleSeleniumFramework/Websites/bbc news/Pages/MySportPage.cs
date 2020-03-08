@@ -35,7 +35,7 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
             GoToUrl(Url);
             DismissAlertWithJS();
             AcceptCookies();
-            Assert.AreEqual(GetUrl(), Url);
+            Assert.AreEqual(Url, GetUrl());
         }
 
         public void NavigateToSigninPage()
