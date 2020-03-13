@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using java.awt;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
 using System;
@@ -20,6 +21,15 @@ namespace SimpleSeleniumFramework.TestFramework
 
         protected string GetUrl() => Driver.Url;
         protected void GoToUrl(string url) => Driver.Navigate().GoToUrl(url);
+        protected bool IsVisible(By by) 
+        {
+            return Driver.FindElement(by).Displayed;
+        }
+
+        protected bool IsEnabled(By by)
+        {
+            return Driver.FindElement(by).Displayed;
+        }
         protected IWebElement GetElement(By by)
         {
             return Driver.FindElement(by);
@@ -105,7 +115,8 @@ namespace SimpleSeleniumFramework.TestFramework
         protected void DismissAlertWithJS()
         {
             IJavaScriptExecutor js = (IJavaScriptExecutor)Driver;
-            js.ExecuteScript("window.prompt = function () { return true }");
+            js.ExecuteScript("window.prompt = function() { return null }");
+        }
+           
         }
     }
-}

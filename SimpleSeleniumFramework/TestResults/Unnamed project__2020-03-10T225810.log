@@ -1,0 +1,91 @@
+﻿2020-03-10T22:58:10.0256080+00:00;VSTestExecutionThread;Info;SpecFlow+Runner execution started
+2020-03-10T22:58:10.0256080+00:00;VSTestExecutionThread;Info;SpecFlow+Runner 3.1.48 in Framework clr40 in x86 mode execution started
+2020-03-10T22:58:10.0256080+00:00;VSTestExecutionThread;Info;TestAdapter Location: C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\TechTalk.SpecRun.VisualStudio.TestAdapter.dll
+2020-03-10T22:58:10.0646141+00:00;VSTestExecutionThread;Info;SpecRun: running tests in C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\SimpleSeleniumFramework.dll
+2020-03-10T22:58:10.0646141+00:00;VSTestExecutionThread;Info;Output folder configured to "C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\TestResults" (default)
+2020-03-10T22:58:10.0646141+00:00;VSTestExecutionThread;Info;Profile: 
+2020-03-10T22:58:10.1866109+00:00;VSTestExecutionThread;Info;Log file path: C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\TestResults\Unnamed project__2020-03-10T225810.log
+2020-03-10T22:58:10.2146334+00:00;VSTestExecutionThread;Info;SpecFlow+Runner Evaluation Mode: Please purchase at http://www.specflow.org/plus to remove test execution delay.
+2020-03-10T22:58:10.2336222+00:00;Thread#15;Info;Checking license
+2020-03-10T22:58:10.4896078+00:00;Thread#15;Info;Evaluation mode: test execution starts in 9 seconds... (this delay is removed in the registered version)
+2020-03-10T22:58:19.4908679+00:00;Thread#15;Info;Evaluation delay finished.
+2020-03-10T22:58:19.4987777+00:00;Thread#15;Info;License check completed
+2020-03-10T22:58:19.4996105+00:00;Thread#15;Info;starting test run
+2020-03-10T22:58:19.5126087+00:00;Thread#15;Info;Discovering target: Default
+2020-03-10T22:58:19.5126087+00:00;Thread#15;Info;Discovering tests from assembly: C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\SimpleSeleniumFramework.dll
+2020-03-10T22:58:19.6256412+00:00;Thread#15;Info;Discovered tests from assembly: C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\SimpleSeleniumFramework.dll
+2020-03-10T22:58:19.6266204+00:00:Test Suite Dump
+2020-03-10T22:58:19.6286262+00:00:#0: Unnamed project/ - 
+2020-03-10T22:58:19.6286262+00:00:#1: Default - 
+2020-03-10T22:58:19.6286262+00:00:#2: SimpleSeleniumFramework - 
+2020-03-10T22:58:19.6286262+00:00:#3: PersonalAccount - 
+2020-03-10T22:58:19.6286262+00:00:#5: PersonalAccount - 
+2020-03-10T22:58:19.8787470+00:00:#4: Sign-in to access personalised sports page - TestAssembly:SimpleSeleniumFramework/Feature:PersonalAccount/Scenario:Sign-in+to+access+personalised+sports+page
+2020-03-10T22:58:19.8787470+00:00:#6: Sign-in to access personalised sports page - TestAssembly:SimpleSeleniumFramework/Feature:PersonalAccount/Scenario:Sign-in+to+access+personalised+sports+page
+2020-03-10T22:58:19.8787470+00:00:End: Test Suite Dump
+2020-03-10T22:58:19.9086095+00:00:Thread#0:Scheduler: get next test for thread 0
+2020-03-10T22:58:19.9116254+00:00:Thread#:Scheduler: testitem #4 from normal test queue 
+2020-03-10T22:58:19.9116254+00:00:Thread#0:Scheduler: considering testitem #4 for thread 0
+2020-03-10T22:58:19.9176260+00:00:Thread#0:TestItem#4:testItemMatchesCurrentTestThread:UnSpecific
+2020-03-10T22:58:19.9186263+00:00:Thread#0:TestItem#4:runsOnOneOtherThreadSpecific:False
+2020-03-10T22:58:19.9186263+00:00:Thread#0:TestItem#4:runsOnOneOtherThreadUnspecific:False
+2020-03-10T22:58:19.9186263+00:00:Thread#0:Scheduler: using testitem #4 for thread 0
+2020-03-10T22:58:19.9197173+00:00:Thread#0:Scheduler: Test #4 is scheduled for thread
+2020-03-10T22:58:19.9206884+00:00:Thread#0:Scheduler: with testItemExecutionIndex 0
+2020-03-10T22:58:19.9246558+00:00:Thread #0: creating new test thread executor for SimpleSeleniumFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null (target: Default)
+2020-03-10T22:58:19.9277403+00:00:Thread #0: Creating test assembly executor for execution model AppDomain
+2020-03-10T22:58:19.9296142+00:00:Thread #0: Creating test assembly executor for execution model AppDomain
+2020-03-10T22:58:19.9317054+00:00:Thread #0: using TechTalk.SpecRun.Framework.Execution.InProcess.InProcAppDomainTestAssemblyExecutorHost to execute tests
+2020-03-10T22:58:20.8826257+00:00:Thread#0:T:-> Loading plugin C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\SpecRun.Runtime.SpecFlowPlugin.dll
+2020-03-10T22:58:20.8907454+00:00:Thread#0:T:-> Using default config
+2020-03-10T22:58:21.7716076+00:00:Thread#0: Test #4/0 is started on thread #0
+2020-03-10T22:58:21.8996097+00:00:Thread#0:T:starting chrome driver setup
+2020-03-10T22:58:28.5906685+00:00:Thread#0:T:chrome driver setup complete
+2020-03-10T22:58:28.5996205+00:00:Thread#0:B:Given I am on bbc sports page
+2020-03-10T22:58:34.6378132+00:00:Thread#0:T:done: SigninSteps.GivenIamOnBbcSportsPage() (5.9s)
+2020-03-10T22:58:34.6536113+00:00:Thread#0:B:When I navigate to signin page
+2020-03-10T22:58:42.2546127+00:00:Thread#0:T:error: stale element reference: element is not attached to the page document
+2020-03-10T22:58:42.2556094+00:00:Thread#0:T:  (Session info: chrome=80.0.3987.132)
+2020-03-10T22:58:42.2556094+00:00:Thread#0:T:  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.18362 x86_64)
+2020-03-10T22:58:42.2586093+00:00:Thread#0:B:And I enter correct username and password
+2020-03-10T22:58:42.2606065+00:00:Thread#0:T:skipped because of previous errors
+2020-03-10T22:58:42.2656067+00:00:Thread#0:B:And I sign in successfully
+2020-03-10T22:58:42.2666058+00:00:Thread#0:T:skipped because of previous errors
+2020-03-10T22:58:42.2686120+00:00:Thread#0:B:Then I expect to see the option to personalise my bbc sports content
+2020-03-10T22:58:42.2686120+00:00:Thread#0:T:skipped because of previous errors
+2020-03-10T22:58:42.3976144+00:00:Thread#0:TestItem#4:Scheduler: reschedule tests for testitem #4
+2020-03-10T22:58:42.4007603+00:00:Thread#0:Scheduler: get next test for thread 0
+2020-03-10T22:58:42.4007603+00:00:Thread#:Scheduler: dequeuing a rescheduled testitem: #4
+2020-03-10T22:58:42.4007603+00:00:Thread#0:Scheduler: considering testitem #4 for thread 0
+2020-03-10T22:58:42.4007603+00:00:Thread#0:TestItem#4:testItemMatchesCurrentTestThread:UnSpecific
+2020-03-10T22:58:42.4007603+00:00:Thread#0:TestItem#4:runsOnOneOtherThreadSpecific:False
+2020-03-10T22:58:42.4007603+00:00:Thread#0:TestItem#4:runsOnOneOtherThreadUnspecific:False
+2020-03-10T22:58:42.4007603+00:00:Thread#0:Scheduler: using testitem #4 for thread 0
+2020-03-10T22:58:42.4007603+00:00:Thread#0:Scheduler: Test #4 is scheduled for thread
+2020-03-10T22:58:42.4007603+00:00:Thread#0:Scheduler: with testItemExecutionIndex 1
+2020-03-10T22:58:42.4046113+00:00:Thread#0:T:killing both webdriver and chrome driver
+2020-03-10T22:58:51.4127532+00:00:Thread#0:T:killed both webdriver and chrome driver
+2020-03-10T22:58:51.4446725+00:00:Thread#0: Test #4/0 is finished on thread #0 as Failed within 29.6720635 seconds
+2020-03-10T22:58:51.4476117+00:00:Thread#0: Test #4/1 is started on thread #0
+2020-03-10T22:58:51.4486123+00:00:Thread#0:T:starting chrome driver setup
+2020-03-10T22:58:57.4416154+00:00:Thread#0:T:chrome driver setup complete
+2020-03-10T22:58:57.4490908+00:00:Thread#0:B:Given I am on bbc sports page
+2020-03-10T22:59:33.5476133+00:00:Thread#0:T:error: Timed out after 10 seconds
+2020-03-10T22:59:33.5536152+00:00:Thread#0:B:When I navigate to signin page
+2020-03-10T22:59:33.6166092+00:00:Thread#0:T:skipped because of previous errors
+2020-03-10T22:59:33.6206242+00:00:Thread#0:B:And I enter correct username and password
+2020-03-10T22:59:33.6256094+00:00:Thread#0:T:skipped because of previous errors
+2020-03-10T22:59:33.6356133+00:00:Thread#0:B:And I sign in successfully
+2020-03-10T22:59:33.6483322+00:00:Thread#0:T:skipped because of previous errors
+2020-03-10T22:59:33.6566100+00:00:Thread#0:B:Then I expect to see the option to personalise my bbc sports content
+2020-03-10T22:59:33.6686072+00:00:Thread#0:T:skipped because of previous errors
+2020-03-10T22:59:33.7096151+00:00:Thread#0:Scheduler: get next test for thread 0
+2020-03-10T22:59:33.7096151+00:00:Thread#:Scheduler: dequeuing a rescheduled testitem: #4
+2020-03-10T22:59:33.7096151+00:00:Thread#0:Scheduler: considering testitem #4 for thread 0
+2020-03-10T22:59:33.7136127+00:00:Thread#0:TestItem#4:testItemMatchesCurrentTestThread:UnSpecific
+2020-03-10T22:59:33.7136127+00:00:Thread#0:TestItem#4:runsOnOneOtherThreadSpecific:False
+2020-03-10T22:59:33.7136127+00:00:Thread#0:TestItem#4:runsOnOneOtherThreadUnspecific:False
+2020-03-10T22:59:33.7136127+00:00:Thread#0:Scheduler: using testitem #4 for thread 0
+2020-03-10T22:59:33.7136127+00:00:Thread#0:Scheduler: Test #4 is scheduled for thread
+2020-03-10T22:59:33.7136127+00:00:Thread#0:Scheduler: with testItemExecutionIndex 2
+2020-03-10T22:59:33.7196115+00:00:Thread#0:T:killing both webdriver and chrome driver

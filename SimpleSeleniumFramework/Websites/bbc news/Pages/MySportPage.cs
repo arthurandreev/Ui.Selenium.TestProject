@@ -35,12 +35,15 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
             DismissAlertWithJS();
             AcceptCookies();
             Assert.AreEqual(Url, GetUrl());
+            //validate against page title
         }
 
         public void NavigateToSigninPage()
         {
             FluentWaitForElementToAppear(By.XPath("//*[contains(text(), 'Sign in')]"), 10, 500);
-            ClickElement(SignInOnLandingPage);      
+            ClickElement(SignInOnLandingPage);
+            //return SignInPage
+            //validate against page title Driver.Title.Contains("");
         }
 
         public void EnterUsernameAndPassword()
@@ -50,6 +53,7 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
             EmailTextBox.SendKeys(Username);
             PasswordTextBox.SendKeys(Password);
             Assert.IsTrue(NeedHelpSigningInLink.Displayed);
+            //validate against page title Driver.Title.Contains("");
         }
 
         public void ClickToSignin()
