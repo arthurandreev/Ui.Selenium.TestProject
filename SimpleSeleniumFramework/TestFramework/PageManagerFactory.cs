@@ -28,7 +28,7 @@ namespace SimpleSeleniumFramework.TestFramework
 
         protected bool IsEnabled(By by)
         {
-            return Driver.FindElement(by).Displayed;
+            return Driver.FindElement(by).Enabled;
         }
         protected IWebElement GetElement(By by)
         {
