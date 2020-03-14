@@ -12,7 +12,7 @@ namespace SimpleSeleniumFramework.TestFramework
     public abstract class PageManagerFactory
     {
         protected IWebDriver Driver;
-        protected ScenarioContext ScenarioContext;
+        protected ScenarioContext ScenarioContext;  
         public PageManagerFactory(IWebDriver driver, ScenarioContext scenarioContext)
         {
             Driver = driver;
@@ -20,6 +20,7 @@ namespace SimpleSeleniumFramework.TestFramework
         }
 
         protected string GetUrl() => Driver.Url;
+        protected string GetPageTitle() => Driver.Title;
         protected void GoToUrl(string url) => Driver.Navigate().GoToUrl(url);
         protected bool IsVisible(By by) 
         {
