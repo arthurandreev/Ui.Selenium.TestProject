@@ -116,7 +116,8 @@ namespace SimpleSeleniumFramework.TestFramework
         protected void DismissAlertWithJS()
         {
             IJavaScriptExecutor js = (IJavaScriptExecutor)Driver;
-            js.ExecuteScript("window.confirm = function() { return false }");
-        }          
+            js.ExecuteScript("window.prompt = function() { return null }");
+        }
+           
+        }
     }
-}
