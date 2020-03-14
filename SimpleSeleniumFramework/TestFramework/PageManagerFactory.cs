@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using java.awt;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
 using System;
@@ -11,7 +12,7 @@ namespace SimpleSeleniumFramework.TestFramework
     public abstract class PageManagerFactory
     {
         protected IWebDriver Driver;
-        protected ScenarioContext ScenarioContext;
+        protected ScenarioContext ScenarioContext;  
         public PageManagerFactory(IWebDriver driver, ScenarioContext scenarioContext)
         {
             Driver = driver;
@@ -19,7 +20,17 @@ namespace SimpleSeleniumFramework.TestFramework
         }
 
         protected string GetUrl() => Driver.Url;
+        protected string GetPageTitle() => Driver.Title;
         protected void GoToUrl(string url) => Driver.Navigate().GoToUrl(url);
+        protected bool IsVisible(By by) 
+        {
+            return Driver.FindElement(by).Displayed;
+        }
+
+        protected bool IsEnabled(By by)
+        {
+            return Driver.FindElement(by).Enabled;
+        }
         protected IWebElement GetElement(By by)
         {
             return Driver.FindElement(by);
@@ -37,7 +48,7 @@ namespace SimpleSeleniumFramework.TestFramework
                 Actions action = new Actions(Driver);
                 action.MoveToElement(element).Build().Perform();
             }
-            catch (NoSuchElementException e)
+            catch (Exception e)
             {
                 Console.WriteLine($"Cannot move to the following element: {element.Text}");
                 Console.WriteLine($"MoveToElement threw the following exception: {e} and stack trace {e.StackTrace}");
@@ -54,7 +65,7 @@ namespace SimpleSeleniumFramework.TestFramework
                 MoveToElement(element);
                 element.Click();
             }
-            catch (Exception e)
+            catch (NoSuchElementException e)
             {
                 Console.WriteLine($"Cannot click the following element: {element.Text}");
                 Console.WriteLine($"ClickElement threw the following exception: {e} and stack trace {e.StackTrace}");
@@ -105,7 +116,7 @@ namespace SimpleSeleniumFramework.TestFramework
         protected void DismissAlertWithJS()
         {
             IJavaScriptExecutor js = (IJavaScriptExecutor)Driver;
-            js.ExecuteScript("window.prompt = function () { return true }");
-        }
+            js.ExecuteScript("window.confirm = function() { return false }");
+        }          
     }
 }
