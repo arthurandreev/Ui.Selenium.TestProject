@@ -1,3 +1,7 @@
+C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\chromedriver.exe
+C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\SpecFlowPlusRunner\netcoreapp3.0\Newtonsoft.Json.dll
+C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\SpecFlowPlusRunner\netcoreapp3.0\System.Configuration.ConfigurationManager.dll
+C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\SpecFlowPlusRunner\netcoreapp3.1\FSharp.Core.dll
 C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\SpecRun.Runtime.SpecFlowPlugin.dll
 C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\TechTalk.SpecRun.dll
 C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\TechTalk.SpecRun.Common.dll
@@ -6,7 +10,6 @@ C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleni
 C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\NUnit3.TestAdapter.pdb
 C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\nunit.engine.dll
 C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\nunit.engine.api.dll
-C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\chromedriver.exe
 C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\SpecFlowPlusRunner\net45\BoDi.dll
 C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\SpecFlowPlusRunner\net45\CommandLine.dll
 C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\SpecFlowPlusRunner\net45\FSharp.Core.dll
@@ -174,10 +177,8 @@ C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleni
 C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\SpecFlowPlusRunner\netcoreapp3.0\FSharp.Core.dll
 C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\SpecFlowPlusRunner\netcoreapp3.0\Microsoft.VisualStudio.Threading.dll
 C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\SpecFlowPlusRunner\netcoreapp3.0\Microsoft.VisualStudio.Validation.dll
-C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\SpecFlowPlusRunner\netcoreapp3.0\Newtonsoft.Json.dll
 C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\SpecFlowPlusRunner\netcoreapp3.0\SpecFlow.Plus.Shared.dll
 C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\SpecFlowPlusRunner\netcoreapp3.0\StreamJsonRpc.dll
-C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\SpecFlowPlusRunner\netcoreapp3.0\System.Configuration.ConfigurationManager.dll
 C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\SpecFlowPlusRunner\netcoreapp3.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\SpecFlowPlusRunner\netcoreapp3.0\System.Security.Permissions.dll
 C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\SpecFlowPlusRunner\netcoreapp3.0\TechTalk.SpecFlow.Plus.RPC.dll
@@ -201,7 +202,6 @@ C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleni
 C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\SpecFlowPlusRunner\netcoreapp3.0\TechTalk.SpecRun.VisualStudio.TestAdapter.dll.config
 C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\SpecFlowPlusRunner\netcoreapp3.1\BoDi.dll
 C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\SpecFlowPlusRunner\netcoreapp3.1\CommandLine.dll
-C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\SpecFlowPlusRunner\netcoreapp3.1\FSharp.Core.dll
 C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\SpecFlowPlusRunner\netcoreapp3.1\Microsoft.VisualStudio.Threading.dll
 C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\SpecFlowPlusRunner\netcoreapp3.1\Microsoft.VisualStudio.Validation.dll
 C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\SpecFlowPlusRunner\netcoreapp3.1\Newtonsoft.Json.dll
