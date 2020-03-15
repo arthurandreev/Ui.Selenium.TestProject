@@ -72,13 +72,13 @@ namespace SimpleSeleniumFramework.Websites.BbcNews.Features
             testRunner.CollectScenarioErrors();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Sign-in to access personalised sports page", new string[] {
+        [TechTalk.SpecRun.ScenarioAttribute("Sign-in to access my bbc sports account", new string[] {
                 "regression"}, SourceLine=6)]
-        public virtual void Sign_InToAccessPersonalisedSportsPage()
+        public virtual void Sign_InToAccessMyBbcSportsAccount()
         {
             string[] tagsOfScenario = new string[] {
                     "regression"};
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sign-in to access personalised sports page", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sign-in to access my bbc sports account", null, new string[] {
                         "regression"});
 #line 7
 this.ScenarioInitialize(scenarioInfo);

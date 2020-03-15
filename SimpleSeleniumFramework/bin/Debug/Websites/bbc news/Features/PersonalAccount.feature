@@ -4,7 +4,7 @@ I want to sign into my bbc account,
 So that I can personalise bbc sports content to my preference
 
 @regression
-Scenario: Sign-in to access personalised sports page
+Scenario: Sign-in to access my bbc sports account
 	Given I am on bbc sports page
 	When I navigate to signin page
 	And I enter correct username and password
