@@ -120,9 +120,11 @@ namespace SimpleSeleniumFramework.TestFramework
                 MoveToElement(element);
                 js.ExecuteScript("arguments[0].click();", element);
             }
-            catch (ElementNotVisibleException)
+            catch (Exception e)
             {
-                element.Click();
+                Console.WriteLine($"Cannot click the following element: {element.Text}");
+                Console.WriteLine($"JSClickElement threw the following exception: {e} and stack trace {e.StackTrace}");
+                TakeScreenshot();
             }
         }
     }
