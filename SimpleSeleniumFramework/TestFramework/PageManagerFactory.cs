@@ -22,15 +22,7 @@ namespace SimpleSeleniumFramework.TestFramework
         protected string GetUrl() => Driver.Url;
         protected string GetPageTitle() => Driver.Title;
         protected void GoToUrl(string url) => Driver.Navigate().GoToUrl(url);
-        protected bool IsVisible(By by) 
-        {
-            return Driver.FindElement(by).Displayed;
-        }
-
-        protected bool IsEnabled(By by)
-        {
-            return Driver.FindElement(by).Enabled;
-        }
+   
         protected IWebElement GetElement(By by)
         {
             return Driver.FindElement(by);
@@ -118,6 +110,21 @@ namespace SimpleSeleniumFramework.TestFramework
             IJavaScriptExecutor js = (IJavaScriptExecutor)Driver;
             js.ExecuteScript("window.prompt = function() { return null }");
         }
-           
+
+        protected void JSClickElement(IWebElement element)
+        {
+            try
+            {
+                var wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(10));
+                IJavaScriptExecutor js = (IJavaScriptExecutor)Driver;
+                wait.Until(condition => element != null && element.Enabled);
+                MoveToElement(element);
+                js.ExecuteScript("arguments[0].click();", element);
+            }
+            catch (ElementNotVisibleException)
+            {
+                element.Click();
+            }
         }
     }
+}

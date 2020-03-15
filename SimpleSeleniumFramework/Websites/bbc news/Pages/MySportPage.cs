@@ -1,7 +1,6 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using SimpleSeleniumFramework.TestFramework;
-using System;
 using TechTalk.SpecFlow;
 
 namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
