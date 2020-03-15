@@ -5,7 +5,7 @@ using TechTalk.SpecFlow;
 
 namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
 {
-    internal class MySportPage : PageManagerFactory
+    public class MySportPage : PageManagerFactory
     {
         private readonly string Url = "https://www.bbc.co.uk/sport/my-sport";
         private readonly string PageTitle = "My Sport - Create your own personal BBC My Sport page";
@@ -13,8 +13,8 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
         private IWebElement AcceptCookiesButton => GetElement(By.Id("bbccookies-continue-button"));
         private IWebElement SignInLink => GetElement(By.XPath("//*[@id='idcta-link']//span[contains(text(), 'Sign in')]"));
         private IWebElement EditMySport => GetElement(By.XPath("//*[@id='my-sport']//span[contains(text(), 'Edit My Sport')]"));
-        
-        public MySportPage(IWebDriver driver, ScenarioContext scenarioContext) : base(driver, scenarioContext) {}
+
+        public MySportPage(IWebDriver driver, ScenarioContext scenarioContext) : base(driver, scenarioContext) { }
         public void AcceptCookies()
         {
             FluentWaitForElementToAppear(By.Id("bbcprivacy-continue-button"), 10, 500);
@@ -28,8 +28,8 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
             GoToUrl(Url);
             DismissAlertWithJS();
             AcceptCookies();
-            Assert.AreEqual(Url, GetUrl());
-            Assert.AreEqual(PageTitle, GetPageTitle());
+            Assert.AreEqual(Url, GetUrl(), "URL for bbc sports page was different to what was expected");
+            Assert.AreEqual(PageTitle, GetPageTitle(), "Page title was different to what was expected");
         }
 
         public void NavigateToSigninPage()
@@ -43,8 +43,8 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
             DismissAlertWithJS();
             FluentWaitForElementToAppear(By.XPath("//*[@id='my-sport']//span[contains(text(), 'Edit My Sport')]"), 20, 500);
             TakeScreenshot();
-            Assert.IsTrue(EditMySport.Enabled);
-            Assert.AreEqual(PageTitle, GetPageTitle());
+            Assert.IsTrue(EditMySport.Enabled, "Edit my sport button was not enabled");
+            Assert.AreEqual(PageTitle, GetPageTitle(), "Page title was different to what was expected");
         }
    }
 }

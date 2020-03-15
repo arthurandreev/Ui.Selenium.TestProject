@@ -1,5 +1,4 @@
-﻿using java.awt;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
 using System;
@@ -9,7 +8,7 @@ using TechTalk.SpecFlow;
 
 namespace SimpleSeleniumFramework.TestFramework
 {
-    internal class PageManagerFactory
+    public class PageManagerFactory
     {
         protected IWebDriver Driver;
         protected ScenarioContext ScenarioContext;  
@@ -65,7 +64,7 @@ namespace SimpleSeleniumFramework.TestFramework
             }
         }
 
-        protected void FluentWaitForElementToAppear(By by, int timeout, int pollInterval)
+        protected virtual void FluentWaitForElementToAppear(By by, int timeout, int pollInterval)
         {
             var fluentWait = new DefaultWait<IWebDriver>(Driver)
             {
@@ -76,7 +75,7 @@ namespace SimpleSeleniumFramework.TestFramework
             fluentWait.Until(x => x.FindElement(by));
         }
 
-        protected void FluentWaitForElementToDisappear(By by, int timeout, int pollInterval)
+        protected virtual void FluentWaitForElementToDisappear(By by, int timeout, int pollInterval)
         {
             var fluentWait = new DefaultWait<IWebDriver>(Driver)
             {
