@@ -10,7 +10,7 @@ using TechTalk.SpecFlow;
 namespace SimpleSeleniumFramework
 {
     [Binding]
-    public class DriverManagerFactory
+    internal class DriverManagerFactory
     {
         private readonly IObjectContainer _objectContainer;
         private IWebDriver _driver;

@@ -9,7 +9,7 @@ using TechTalk.SpecFlow;
 
 namespace SimpleSeleniumFramework.TestFramework
 {
-    public abstract class PageManagerFactory
+    internal class PageManagerFactory
     {
         protected IWebDriver Driver;
         protected ScenarioContext ScenarioContext;  

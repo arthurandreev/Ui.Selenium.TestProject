@@ -5,7 +5,7 @@ using TechTalk.SpecFlow;
 
 namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
 {
-    public class SignInPage : PageManagerFactory
+    internal class SignInPage : PageManagerFactory
     {
         private readonly string PageTitle = "BBC – Sign in";
         private readonly string Username = "testautomation1011@gmail.com";
@@ -22,11 +22,11 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
             FluentWaitForElementToAppear(By.Id("submit-button"), 10, 500);
             EmailTextBox.SendKeys(Username);
             PasswordTextBox.SendKeys(Password);
-        }
-        public void ClickToSignin()
-        {
-            ClickElement(SignInButton);
             Assert.AreEqual(PageTitle, GetPageTitle());
+        }
+        public void SignIn()
+        {
+            ClickElement(SignInButton);          
         }
     }
 }

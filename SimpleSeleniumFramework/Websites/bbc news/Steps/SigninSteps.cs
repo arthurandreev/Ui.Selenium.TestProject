@@ -36,7 +36,7 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Steps
         [When(@"I sign in successfully")]
         public void AndISignInSuccessfully()
         {
-            _signInPage.ClickToSignin();
+            _signInPage.SignIn();
         }
 
         [Then(@"I expect to see the option to personalise my bbc sports content")]
