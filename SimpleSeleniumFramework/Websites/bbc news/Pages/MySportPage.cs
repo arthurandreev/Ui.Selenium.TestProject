@@ -46,5 +46,5 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
             Assert.IsTrue(EditMySport.Enabled, "Edit my sport button was not enabled");
             Assert.AreEqual(PageTitle, GetPageTitle(), $"Expected PageTitle {PageTitle}. Actual PageTitle {GetPageTitle()}");
         }
-   }
+    }
 }
