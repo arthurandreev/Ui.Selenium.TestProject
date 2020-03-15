@@ -29,7 +29,7 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
             DismissAlertWithJS();
             AcceptCookies();
             Assert.AreEqual(Url, GetUrl(), $"Expected Url => {Url}. Actual Url => {GetUrl()}");
-            Assert.AreEqual(PageTitle, GetPageTitle(), $"Expected PageTitle {PageTitle}. Actual PageTitle {GetPageTitle()}");
+            Assert.AreEqual(PageTitle, GetPageTitle(), $"Expected PageTitle => {PageTitle}. Actual PageTitle => {GetPageTitle()}");
         }
 
         public void NavigateToSigninPage()
@@ -44,7 +44,7 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
             FluentWaitForElementToAppear(By.XPath("//*[@id='my-sport']//span[contains(text(), 'Edit My Sport')]"), 20, 500);
             TakeScreenshot();
             Assert.IsTrue(EditMySport.Enabled, "Edit my sport button was not enabled");
-            Assert.AreEqual(PageTitle, GetPageTitle(), $"Expected PageTitle {PageTitle}. Actual PageTitle {GetPageTitle()}");
+            Assert.AreEqual(PageTitle, GetPageTitle(), $"Expected PageTitle => {PageTitle}. Actual PageTitle => {GetPageTitle()}");
         }
     }
 }

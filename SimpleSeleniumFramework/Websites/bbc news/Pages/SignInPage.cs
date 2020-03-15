@@ -23,7 +23,7 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
             FluentWaitForElementToAppear(By.Id("submit-button"), 10, 500);
             EmailTextBox.SendKeys(TestUser.Email);
             PasswordTextBox.SendKeys(TestUser.Password);
-            Assert.AreEqual(PageTitle, GetPageTitle(), $"Expected PageTitle {PageTitle}. Actual PageTitle {GetPageTitle()}");
+            Assert.AreEqual(PageTitle, GetPageTitle(), $"Expected PageTitle => {PageTitle}. Actual PageTitle => {GetPageTitle()}");
         }
         public void SignIn()
         {
