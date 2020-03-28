@@ -91,7 +91,7 @@ namespace SimpleSeleniumFramework.TestFramework
                 Screenshot screenShot = ((ITakesScreenshot)Driver).GetScreenshot();
                 string title = ScenarioContext.ScenarioInfo.Title;
                 string screenShotName = title + DateTime.Now.ToString("yyyy-MM-dd-HH_mm_ss");
-                string filePathAndName = "C:\\Users\\arthurandreev\\source\\repos\\SeleniumFrameworkProject\\Screenshots\\" + screenShotName + ".jpeg";
+                string filePathAndName = "C:\\Users\\lulzimahmeti\\source\\SeleniumFrameworkProject\\Screenshots\\" + screenShotName + ".jpeg";
                 screenShot.SaveAsFile(filePathAndName, ScreenshotImageFormat.Jpeg);
             }
             catch (Exception e)

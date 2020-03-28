@@ -272,7 +272,6 @@ C:\Users\lulzimahmeti\source\SeleniumFrameworkProject\SimpleSeleniumFramework\bi
 C:\Users\lulzimahmeti\source\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\TechTalk.SpecRun.dll
 C:\Users\lulzimahmeti\source\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\TechTalk.SpecRun.Common.dll
 C:\Users\lulzimahmeti\source\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\BoDi.dll
-C:\Users\lulzimahmeti\source\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\Websites\bbc news\Features\PersonalAccount.feature
 C:\Users\lulzimahmeti\source\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\NUnit3.TestAdapter.dll
 C:\Users\lulzimahmeti\source\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\NUnit3.TestAdapter.pdb
 C:\Users\lulzimahmeti\source\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\nunit.engine.dll
@@ -509,6 +508,7 @@ C:\Users\lulzimahmeti\source\SeleniumFrameworkProject\SimpleSeleniumFramework\bi
 C:\Users\lulzimahmeti\source\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\TechTalk.SpecFlow.Plus.RPC.dll
 C:\Users\lulzimahmeti\source\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\StreamJsonRpc.dll
 C:\Users\lulzimahmeti\source\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\FSharp.Core.dll
+C:\Users\lulzimahmeti\source\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\Websites\bbc news\Features\PersonalAccount.feature
 C:\Users\lulzimahmeti\source\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\SimpleSeleniumFramework.dll
 C:\Users\lulzimahmeti\source\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\SimpleSeleniumFramework.pdb
 C:\Users\lulzimahmeti\source\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\Cucumber.Messages.dll

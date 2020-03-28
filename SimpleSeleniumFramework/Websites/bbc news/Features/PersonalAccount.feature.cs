@@ -72,13 +72,13 @@ namespace SimpleSeleniumFramework.Websites.BbcNews.Features
             testRunner.CollectScenarioErrors();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Sign-in to access personalised sports page", new string[] {
+        [TechTalk.SpecRun.ScenarioAttribute("Sign-in to access my bbc sports page", new string[] {
                 "regression"}, SourceLine=6)]
-        public virtual void Sign_InToAccessPersonalisedSportsPage()
+        public virtual void Sign_InToAccessMyBbcSportsPage()
         {
             string[] tagsOfScenario = new string[] {
                     "regression"};
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sign-in to access personalised sports page", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sign-in to access my bbc sports page", null, new string[] {
                         "regression"});
 #line 7
 this.ScenarioInitialize(scenarioInfo);
@@ -114,6 +114,50 @@ this.ScenarioInitialize(scenarioInfo);
 #line hidden
 #line 12
  testRunner.Then("I expect my bbc sports news to enable me to edit my topic selection", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Adding topics to my bbc sports page", new string[] {
+                "regression"}, SourceLine=14)]
+        public virtual void AddingTopicsToMyBbcSportsPage()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "regression"};
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Adding topics to my bbc sports page", null, new string[] {
+                        "regression"});
+#line 15
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 16
+    testRunner.Given("I have signed in to my bbc sports page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 17
+ testRunner.When("I select the option to edit my topics", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 18
+ testRunner.And("I add new topics", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 19
+ testRunner.Then("I expect Cycling and Swimming to have all been added to my topics successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

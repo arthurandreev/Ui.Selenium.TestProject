@@ -6,7 +6,7 @@ using TechTalk.SpecFlow;
 
 namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
 {
-   public class MySportPage : PageManagerFactory
+    public class MySportPage : PageManagerFactory
     {
         private readonly string Url = "https://www.bbc.co.uk/sport/my-sport";
         private readonly string Username = "testautomation1011@gmail.com";
@@ -20,10 +20,12 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
         private IWebElement HaveYourSayIFrame => GetElement(By.Id("edr_l_first"));
         private IWebElement NoThanksButton => GetElement(By.CssSelector("#no"));
         private IWebElement EditMySport => GetElement(By.XPath("//*[@id='my-sport']//span[contains(text(), 'Edit My Sport')]"));
-        
-        public MySportPage(IWebDriver driver, ScenarioContext scenarioContext) : base(driver, scenarioContext) 
+        private IWebElement Cycling => GetElement(By.XPath("//*[@class='sp-c-mysport-settings__box']//p[contains(text(), 'Cycling')]"));
+        private IWebElement Swimming => GetElement(By.XPath("//*[@class='sp-c-mysport-settings__box']//p[contains(text(), 'Swimming')]"));
+        private IWebElement SaveButton => GetElement(By.XPath("//*/descendant::button[(text() = 'Save changes')]"));  
+        public MySportPage(IWebDriver driver, ScenarioContext scenarioContext) : base(driver, scenarioContext)
         {
-        
+
         }
         public void AcceptCookies()
         {
@@ -43,15 +45,15 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
         public void NavigateToSigninPage()
         {
             FluentWaitForElementToAppear(By.XPath("//*[contains(text(), 'Sign in')]"), 10, 500);
-            ClickElement(SignInOnLandingPage);          
+            ClickElement(SignInOnLandingPage);
         }
 
         public void EnterUsernameAndPassword()
         {
-           DismissAlertIfPresent();
-           FluentWaitForElementToAppear(By.Id("submit-button"), 10, 500);
-           EmailTextBox.SendKeys(Username);
-           PasswordTextBox.SendKeys(Password);
+            DismissAlertIfPresent();
+            FluentWaitForElementToAppear(By.Id("submit-button"), 10, 500);
+            EmailTextBox.SendKeys(Username);
+            PasswordTextBox.SendKeys(Password);
         }
 
         public void ClickToSignin()
@@ -59,13 +61,31 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
             ClickElement(SignInButtonOnSigninPage);
         }
 
+        public void EditMyTopics()
+        {
+            FluentWaitForElementToAppear(By.XPath("//*[@id='my-sport']//span[contains(text(), 'Edit My Sport')]"), 20, 500);
+            ClickElement(EditMySport);
+        }
+
+        public void AddTopics()
+        {
+            FluentWaitForElementToAppear(By.XPath("//*[@class='sp-c-mysport-settings__box']//p[contains(text(), 'Cycling')]"), 10, 500);
+            ClickElement(Cycling);
+            FluentWaitForElementToAppear(By.XPath("//*[@class='sp-c-mysport-settings__box']//p[contains(text(), 'Swimming')]"), 10, 500);
+            ClickElement(Swimming);
+            FluentWaitForElementToAppear(By.XPath("//button[(text() = 'Save changes')]"), 10, 500);
+            ClickElement(SaveButton);
+        }
+
         public void ValidateMyBbcSportsNewsPage()
         {
             DismissAlertIfPresent();
             FluentWaitForElementToAppear(By.XPath("//*[@id='my-sport']//span[contains(text(), 'Edit My Sport')]"), 20, 500);
-            Assert.IsTrue(EditMySport.Enabled);
             TakeScreenshot();
+            Assert.IsTrue(EditMySport.Enabled);
         }
+
+
 
         public void DismissAlertIfPresent()
         {
@@ -84,5 +104,13 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
                 Console.WriteLine("IFrame element not present");
             }
         }
-   }
+
+        public void NavigateToMySportsPageAndSignIn()
+        {
+            NavigateToMySportPage();
+            NavigateToSigninPage();
+            EnterUsernameAndPassword();
+            ClickToSignin();
+        }
+    }
 }
