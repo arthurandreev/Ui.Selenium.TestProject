@@ -8,9 +8,11 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Steps
     public sealed class SigninSteps
     {
         private readonly MySportPage _mySportPage;
+        private readonly SignInPage _signInPage;
         public SigninSteps(IWebDriver driver, ScenarioContext scenarioContext)
         {
             _mySportPage = new MySportPage(driver, scenarioContext);
+            _signInPage = new SignInPage(driver, scenarioContext);
         }
 
         [Given(@"I am on bbc sports page")]
@@ -28,17 +30,17 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Steps
         [When(@"I enter correct username and password")]
         public void AndEnterCorrectUsernameAndPassword()
         {
-            _mySportPage.EnterUsernameAndPassword();
+            _signInPage.EnterUsernameAndPassword();
         }
 
         [When(@"I sign in successfully")]
         public void AndISignInSuccessfully()
         {
-            _mySportPage.ClickToSignin();
+            _signInPage.SignIn();
         }
 
-        [Then(@"I expect my bbc sports news to enable me to edit my topic selection")]
-        public void ThenIExpectMyBbcSportsNewsToEnableMeToEditMyTopicSelection()
+        [Then(@"I expect to see the option to personalise my bbc sports content")]
+        public void ThenIExpectToSeeTheOptionToPersonaliseMyBbcSportsContent()
         {
             _mySportPage.ValidateMyBbcSportsNewsPage();
         }

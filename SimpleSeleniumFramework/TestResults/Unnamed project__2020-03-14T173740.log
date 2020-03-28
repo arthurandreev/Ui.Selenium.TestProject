@@ -1,0 +1,67 @@
+﻿2020-03-14T17:37:40.3054871+00:00;VSTestExecutionThread;Info;SpecFlow+Runner execution started
+2020-03-14T17:37:40.3064814+00:00;VSTestExecutionThread;Info;SpecFlow+Runner 3.1.48 in Framework clr40 in x86 mode execution started
+2020-03-14T17:37:40.3064814+00:00;VSTestExecutionThread;Info;TestAdapter Location: C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\TechTalk.SpecRun.VisualStudio.TestAdapter.dll
+2020-03-14T17:37:40.3814818+00:00;VSTestExecutionThread;Info;SpecRun: running tests in C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\SimpleSeleniumFramework.dll
+2020-03-14T17:37:40.3824820+00:00;VSTestExecutionThread;Info;Output folder configured to "C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\TestResults" (default)
+2020-03-14T17:37:40.3824820+00:00;VSTestExecutionThread;Info;Profile: 
+2020-03-14T17:37:40.6594907+00:00;VSTestExecutionThread;Info;Log file path: C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\TestResults\Unnamed project__2020-03-14T173740.log
+2020-03-14T17:37:40.6954874+00:00;VSTestExecutionThread;Info;SpecFlow+Runner Evaluation Mode: Please purchase at http://www.specflow.org/plus to remove test execution delay.
+2020-03-14T17:37:40.7314973+00:00;Thread#15;Info;Checking license
+2020-03-14T17:37:41.8205140+00:00;Thread#15;Info;Evaluation mode: test execution starts in 14 seconds... (this delay is removed in the registered version)
+2020-03-14T17:37:55.9524826+00:00;Thread#15;Info;Evaluation delay finished.
+2020-03-14T17:37:56.0334808+00:00;Thread#15;Info;License check completed
+2020-03-14T17:37:56.0351483+00:00;Thread#15;Info;starting test run
+2020-03-14T17:37:56.2649126+00:00;Thread#15;Info;Discovering target: Default
+2020-03-14T17:37:56.2713602+00:00;Thread#15;Info;Discovering tests from assembly: C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\SimpleSeleniumFramework.dll
+2020-03-14T17:37:59.7015143+00:00;Thread#15;Info;Discovered tests from assembly: C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\SimpleSeleniumFramework.dll
+2020-03-14T17:37:59.7015143+00:00:Test Suite Dump
+2020-03-14T17:37:59.7245874+00:00:#0: Unnamed project/ - 
+2020-03-14T17:37:59.7245874+00:00:#1: Default - 
+2020-03-14T17:37:59.7245874+00:00:#2: SimpleSeleniumFramework - 
+2020-03-14T17:37:59.7245874+00:00:#3: PersonalAccount - 
+2020-03-14T17:37:59.7245874+00:00:#5: PersonalAccount - 
+2020-03-14T17:38:01.0795416+00:00:#4: Sign-in to access personalised sports page - TestAssembly:SimpleSeleniumFramework/Feature:PersonalAccount/Scenario:Sign-in+to+access+personalised+sports+page
+2020-03-14T17:38:01.0795416+00:00:#6: Sign-in to access personalised sports page - TestAssembly:SimpleSeleniumFramework/Feature:PersonalAccount/Scenario:Sign-in+to+access+personalised+sports+page
+2020-03-14T17:38:01.0795416+00:00:End: Test Suite Dump
+2020-03-14T17:38:01.1775019+00:00:Thread#0:Scheduler: get next test for thread 0
+2020-03-14T17:38:01.2605947+00:00:Thread#:Scheduler: testitem #4 from normal test queue 
+2020-03-14T17:38:01.2605947+00:00:Thread#0:Scheduler: considering testitem #4 for thread 0
+2020-03-14T17:38:01.3786198+00:00:Thread#0:TestItem#4:testItemMatchesCurrentTestThread:UnSpecific
+2020-03-14T17:38:01.3816620+00:00:Thread#0:TestItem#4:runsOnOneOtherThreadSpecific:False
+2020-03-14T17:38:01.3816620+00:00:Thread#0:TestItem#4:runsOnOneOtherThreadUnspecific:False
+2020-03-14T17:38:01.3816620+00:00:Thread#0:Scheduler: using testitem #4 for thread 0
+2020-03-14T17:38:01.3885424+00:00:Thread#0:Scheduler: Test #4 is scheduled for thread
+2020-03-14T17:38:01.3926524+00:00:Thread#0:Scheduler: with testItemExecutionIndex 0
+2020-03-14T17:38:01.4953958+00:00:Thread #0: creating new test thread executor for SimpleSeleniumFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null (target: Default)
+2020-03-14T17:38:01.5022432+00:00:Thread #0: Creating test assembly executor for execution model AppDomain
+2020-03-14T17:38:01.8324808+00:00:Thread #0: Creating test assembly executor for execution model AppDomain
+2020-03-14T17:38:01.8364823+00:00:Thread #0: using TechTalk.SpecRun.Framework.Execution.InProcess.InProcAppDomainTestAssemblyExecutorHost to execute tests
+2020-03-14T17:38:04.5605155+00:00:Thread#0:T:-> Loading plugin C:\Users\arthurandreev\source\arthurbranch\SeleniumFrameworkProject\SimpleSeleniumFramework\bin\Debug\SpecRun.Runtime.SpecFlowPlugin.dll
+2020-03-14T17:38:05.7417684+00:00:Thread#0:T:-> Using default config
+2020-03-14T17:38:13.9685642+00:00:Thread#0: Test #4/0 is started on thread #0
+2020-03-14T17:38:16.0154875+00:00:Thread#0:T:starting chrome driver setup
+2020-03-14T17:38:31.4994828+00:00:Thread#0:T:chrome driver setup complete
+2020-03-14T17:38:31.5094785+00:00:Thread#0:B:Given I am on bbc sports page
+2020-03-14T17:38:55.2754786+00:00:Thread#0:T:done: SigninSteps.GivenIamOnBbcSportsPage() (23.6s)
+2020-03-14T17:38:55.3884836+00:00:Thread#0:B:When I navigate to signin page
+2020-03-14T17:38:55.8374801+00:00:Thread#0:T:done: SigninSteps.WhenINavigateToSigninPage() (0.4s)
+2020-03-14T17:38:55.8404857+00:00:Thread#0:B:And I enter correct username and password
+2020-03-14T17:39:12.6014797+00:00:Thread#0:T:done: SigninSteps.AndEnterCorrectUsernameAndPassword() (16.8s)
+2020-03-14T17:39:12.6024806+00:00:Thread#0:B:And I sign in successfully
+2020-03-14T17:39:42.4524809+00:00:Thread#0:T:error:   Expected string length 13 but was 53. Strings differ at index 0.
+2020-03-14T17:39:42.4924803+00:00:Thread#0:T:  Expected: "BBC – Sign in"
+2020-03-14T17:39:42.4954802+00:00:Thread#0:T:  But was:  "My Sport - Create your own personal BBC My Sport page"
+2020-03-14T17:39:42.4964760+00:00:Thread#0:T:  -----------^
+2020-03-14T17:39:42.5065775+00:00:Thread#0:B:Then I expect to see the option to personalise my bbc sports content
+2020-03-14T17:39:42.5094880+00:00:Thread#0:T:skipped because of previous errors
+2020-03-14T17:39:42.5944767+00:00:Thread#0:TestItem#4:Scheduler: reschedule tests for testitem #4
+2020-03-14T17:39:42.5984986+00:00:Thread#0:Scheduler: get next test for thread 0
+2020-03-14T17:39:42.6004773+00:00:Thread#:Scheduler: dequeuing a rescheduled testitem: #4
+2020-03-14T17:39:42.6004773+00:00:Thread#0:Scheduler: considering testitem #4 for thread 0
+2020-03-14T17:39:42.6004773+00:00:Thread#0:TestItem#4:testItemMatchesCurrentTestThread:UnSpecific
+2020-03-14T17:39:42.6004773+00:00:Thread#0:TestItem#4:runsOnOneOtherThreadSpecific:False
+2020-03-14T17:39:42.6014789+00:00:Thread#0:TestItem#4:runsOnOneOtherThreadUnspecific:False
+2020-03-14T17:39:42.6014789+00:00:Thread#0:Scheduler: using testitem #4 for thread 0
+2020-03-14T17:39:42.6014789+00:00:Thread#0:Scheduler: Test #4 is scheduled for thread
+2020-03-14T17:39:42.6014789+00:00:Thread#0:Scheduler: with testItemExecutionIndex 1
+2020-03-14T17:39:42.6055063+00:00:Thread#0:T:killing both webdriver and chrome driver

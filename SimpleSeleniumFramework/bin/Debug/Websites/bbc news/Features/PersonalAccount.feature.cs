@@ -19,8 +19,8 @@ namespace SimpleSeleniumFramework.Bin.Debug.Websites.BbcNews.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.1.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("PersonalAccount", Description="As a user, \r\nI want to sign into my bbc account, \r\nSo that I can view bbc sports " +
-        "content personalised to me", SourceFile="bin\\Debug\\Websites\\bbc news\\Features\\PersonalAccount.feature", SourceLine=0)]
+    [TechTalk.SpecRun.FeatureAttribute("PersonalAccount", Description="As a user, \r\nI want to sign into my bbc account, \r\nSo that I can personalise bbc " +
+        "sports content to my preference", SourceFile="bin\\Debug\\Websites\\bbc news\\Features\\PersonalAccount.feature", SourceLine=0)]
     public partial class PersonalAccountFeature
     {
         
@@ -35,8 +35,8 @@ namespace SimpleSeleniumFramework.Bin.Debug.Websites.BbcNews.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "PersonalAccount", "As a user, \r\nI want to sign into my bbc account, \r\nSo that I can view bbc sports " +
-                    "content personalised to me", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "PersonalAccount", "As a user, \r\nI want to sign into my bbc account, \r\nSo that I can personalise bbc " +
+                    "sports content to my preference", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -72,13 +72,13 @@ namespace SimpleSeleniumFramework.Bin.Debug.Websites.BbcNews.Features
             testRunner.CollectScenarioErrors();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Sign-in to access my bbc sports page", new string[] {
+        [TechTalk.SpecRun.ScenarioAttribute("Sign-in to access my bbc sports account", new string[] {
                 "regression"}, SourceLine=6)]
-        public virtual void Sign_InToAccessMyBbcSportsPage()
+        public virtual void Sign_InToAccessMyBbcSportsAccount()
         {
             string[] tagsOfScenario = new string[] {
                     "regression"};
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sign-in to access my bbc sports page", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sign-in to access my bbc sports account", null, new string[] {
                         "regression"});
 #line 7
 this.ScenarioInitialize(scenarioInfo);
@@ -113,51 +113,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("I sign in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 12
- testRunner.Then("I expect my bbc sports news to enable me to edit my topic selection", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [TechTalk.SpecRun.ScenarioAttribute("Adding topics to my bbc sports page", new string[] {
-                "regression"}, SourceLine=14)]
-        public virtual void AddingTopicsToMyBbcSportsPage()
-        {
-            string[] tagsOfScenario = new string[] {
-                    "regression"};
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Adding topics to my bbc sports page", null, new string[] {
-                        "regression"});
-#line 15
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            bool isScenarioIgnored = default(bool);
-            bool isFeatureIgnored = default(bool);
-            if ((tagsOfScenario != null))
-            {
-                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((this._featureTags != null))
-            {
-                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((isScenarioIgnored || isFeatureIgnored))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 16
-    testRunner.Given("I have signed in to my bbc sports page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 17
- testRunner.When("I select the option to edit my topics", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 18
- testRunner.And("I add new topics", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 19
- testRunner.Then("I expect Cycling and Swimming to have all been added to my topics successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I expect to see the option to personalise my bbc sports content", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

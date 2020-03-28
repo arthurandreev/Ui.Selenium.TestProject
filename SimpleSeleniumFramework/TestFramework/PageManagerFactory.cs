@@ -3,14 +3,15 @@ using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using TechTalk.SpecFlow;
 
 namespace SimpleSeleniumFramework.TestFramework
 {
-    public abstract class PageManagerFactory
+    public class PageManagerFactory
     {
         protected IWebDriver Driver;
-        protected ScenarioContext ScenarioContext;
+        protected ScenarioContext ScenarioContext;  
         public PageManagerFactory(IWebDriver driver, ScenarioContext scenarioContext)
         {
             Driver = driver;
@@ -18,7 +19,9 @@ namespace SimpleSeleniumFramework.TestFramework
         }
 
         protected string GetUrl() => Driver.Url;
+        protected string GetPageTitle() => Driver.Title;
         protected void GoToUrl(string url) => Driver.Navigate().GoToUrl(url);
+   
         protected IWebElement GetElement(By by)
         {
             return Driver.FindElement(by);
@@ -36,10 +39,10 @@ namespace SimpleSeleniumFramework.TestFramework
                 Actions action = new Actions(Driver);
                 action.MoveToElement(element).Build().Perform();
             }
-            catch (NoSuchElementException e)
+            catch (Exception e)
             {
                 Console.WriteLine($"Cannot move to the following element: {element.Text}");
-                Console.WriteLine($"MoveToElement threw the following exception: {e}");
+                Console.WriteLine($"MoveToElement threw the following exception: {e} and stack trace {e.StackTrace}");
                 TakeScreenshot();
             }
         }
@@ -53,15 +56,15 @@ namespace SimpleSeleniumFramework.TestFramework
                 MoveToElement(element);
                 element.Click();
             }
-            catch (Exception e)
+            catch (NoSuchElementException e)
             {
                 Console.WriteLine($"Cannot click the following element: {element.Text}");
-                Console.WriteLine($"ClickElement threw the following exception: {e}");
+                Console.WriteLine($"ClickElement threw the following exception: {e} and stack trace {e.StackTrace}");
                 TakeScreenshot();
             }
         }
 
-        protected void FluentWaitForElementToAppear(By by, int timeout, int pollInterval)
+        protected virtual void FluentWaitForElementToAppear(By by, int timeout, int pollInterval)
         {
             var fluentWait = new DefaultWait<IWebDriver>(Driver)
             {
@@ -72,7 +75,7 @@ namespace SimpleSeleniumFramework.TestFramework
             fluentWait.Until(x => x.FindElement(by));
         }
 
-        protected void FluentWaitForElementToDisappear(By by, int timeout, int pollInterval)
+        protected virtual void FluentWaitForElementToDisappear(By by, int timeout, int pollInterval)
         {
             var fluentWait = new DefaultWait<IWebDriver>(Driver)
             {
@@ -83,7 +86,6 @@ namespace SimpleSeleniumFramework.TestFramework
             fluentWait.Until(x => (x.FindElements(by).Count == 0));
         }
 
-        //TODO: change hardcoded filepath to project directory
         protected void TakeScreenshot()
         {
             try
@@ -91,14 +93,39 @@ namespace SimpleSeleniumFramework.TestFramework
                 Screenshot screenShot = ((ITakesScreenshot)Driver).GetScreenshot();
                 string title = ScenarioContext.ScenarioInfo.Title;
                 string screenShotName = title + DateTime.Now.ToString("yyyy-MM-dd-HH_mm_ss");
-                string filePathAndName = "C:\\Users\\lulzimahmeti\\source\\SeleniumFrameworkProject\\Screenshots\\" + screenShotName + ".jpeg";
+                string testResultsFolder = Directory.GetCurrentDirectory();
+                string filePathAndName = testResultsFolder + "\\" + screenShotName + ".jpeg";
                 screenShot.SaveAsFile(filePathAndName, ScreenshotImageFormat.Jpeg);
             }
             catch (Exception e)
             {
-                Console.WriteLine($"TakeScreenShot threw the following exception: {e}");
+                Console.WriteLine($"TakeScreenShot threw the following exception: {e} and stack trace {e.StackTrace}");
             }
             
+        }
+
+        protected void DismissAlertWithJS()
+        {
+            IJavaScriptExecutor js = (IJavaScriptExecutor)Driver;
+            js.ExecuteScript("window.prompt = function() { return null }");
+        }
+
+        protected void JSClickElement(IWebElement element)
+        {
+            try
+            {
+                var wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(10));
+                IJavaScriptExecutor js = (IJavaScriptExecutor)Driver;
+                wait.Until(condition => element != null && element.Enabled);
+                MoveToElement(element);
+                js.ExecuteScript("arguments[0].click();", element);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"Cannot click the following element: {element.Text}");
+                Console.WriteLine($"JSClickElement threw the following exception: {e} and stack trace {e.StackTrace}");
+                TakeScreenshot();
+            }
         }
     }
 }
