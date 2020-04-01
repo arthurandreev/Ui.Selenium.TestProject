@@ -8,7 +8,7 @@ This is a living project with functionality that will be extended regularly to a
 - Add screenshot taking capability to screenshot NoSuchElementException events for enhanced debugging - DONE
 - Implement Sing-in scenario - DONE
 - Implement Add topics scenario - WIP
-- Add tearDown hook that resets topic selection to zero after Add Topics scenario is run
+- Add tearDown hook that resets topic selection to zero after Add Topics scenario is run - TODO
 
 ## Possible Extensions:
 - Extend the project to allow for cross browser testing - TODO
