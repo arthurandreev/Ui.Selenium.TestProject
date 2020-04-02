@@ -1,6 +1,4 @@
-﻿
-
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using SimpleSeleniumFramework.Websites.bbc_news.Pages;
 using TechTalk.SpecFlow;
 
@@ -10,33 +8,44 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Steps
     public sealed class AddingTopicSteps
     {
         private readonly MySportPage _mySportPage;
+        private readonly SignInPage _signInPage;
         public AddingTopicSteps(IWebDriver driver, ScenarioContext scenarioContext)
         {
             _mySportPage = new MySportPage(driver, scenarioContext);
+            _signInPage = new SignInPage(driver, scenarioContext);
         }
 
-        [Given(@"I have signed in to my bbc sports page")]
-        public void GivenIamOnBbcSportsPage()
+        [Given(@"I have signed in to my BBC sports account")]
+        public void GivenIHaveSignedInToMyBBCSportsAccount()
         {
-            _mySportPage.NavigateToMySportsPageAndSignIn();
+            _mySportPage.NavigateToMySportPage();
+            _mySportPage.NavigateToSigninPage();
+            _signInPage.EnterUsernameAndPassword();
+            _signInPage.SignIn();
         }
 
-        [When(@"I select the option to edit my topics")]
-        public void AndISelectTheOptionToEditMyTopics()
+        [When(@"I start personalising my BBC sport page")]
+        public void AndIPersonaliseMyBBCSportPage()
         {
-            _mySportPage.EditMyTopics();
+            _mySportPage.StartPersonalisingMySportPage();
         }
 
-        [When(@"I add new topics")]
-        public void WhenIAddNewTopics()
+        [When(@"I search and add Judo and Formula 1 topics")]
+        public void AndISearchAndAddJudoAndFormula1Topics()
         {
-            _mySportPage.AddTopics();
+            _mySportPage.SearchAndAddTopics();
         }
 
-        [Then(@"I expect Cycling and Swimming to have all been added to my topics successfully")]
-        public void ThenIExpectBbcSportsNewsContentToBeFilteredToMixedMartialArtsBoxingAndFormula1()
+        [When(@"I save my changes")]
+        public void AndISaveMyChanges()
         {
-            _mySportPage.ValidateMyBbcSportsNewsPage();
+            _mySportPage.SaveMyChanges();
+        }
+
+        [Then(@"I expect Judo and Formula 1 to have been added to my list of topics")]
+        public void ThenIExpectJudoAndFormula1ToHaveBeenAddedToMyListOfTopics()
+        {
+            _mySportPage.ValidateTopicsAddedHaveBeenSaved();
         }
     }
 }
