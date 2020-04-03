@@ -8,7 +8,6 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
     public class MySportPage : PageManagerFactory
     {
         private readonly string Url = "https://www.bbc.co.uk/sport/my-sport";
-
         private readonly string PageTitle = "My Sport - Create your own personal BBC My Sport page";
         private IWebElement OkCookiesButton => GetElement(By.Id("bbcprivacy-continue-button"));
         private IWebElement AcceptCookiesButton => GetElement(By.Id("bbccookies-continue-button"));
