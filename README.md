@@ -1,4 +1,4 @@
-# selenium-framework-project
+# UI automation framework built with specflow and selenium
 This is a living project with functionality that will be extended regularly to advance knowledge of latest web testing tools and best practices. This is a collaborative project between myself and @LulzimAhmeti. 
 
 ## MVP:
