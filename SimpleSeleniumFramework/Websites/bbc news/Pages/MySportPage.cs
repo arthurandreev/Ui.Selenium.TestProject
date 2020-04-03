@@ -95,13 +95,13 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
             DismissAlertWithJS();
             FluentWaitForElementToAppear(By.XPath("//*[@id='my-sport']//span[contains(text(), 'Edit My Sport')]"), 20, 500);
             TakeScreenshot();
-            Assert.IsTrue(EditMySport.Enabled, "Edit my sport button was not enabled");
             Assert.AreEqual(PageTitle, GetPageTitle(), $"Expected PageTitle => {PageTitle}. Actual PageTitle => {GetPageTitle()}");
         }
 
         public void ValidateTopicsAddedHaveBeenSaved()
         {
             ValidateMyBbcSportsNewsPage();
+            Assert.IsTrue(EditMySport.Enabled, "Edit my sport button was not enabled");
             //TODO
             //Add validation to check that Judo and Formula1 topics are now present on my bbc sport page
         }
