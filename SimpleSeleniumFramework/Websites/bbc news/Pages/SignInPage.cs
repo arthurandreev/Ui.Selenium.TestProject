@@ -19,7 +19,6 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
 
         public void EnterUsernameAndPassword()
         {
-            DismissAlertWithJS();
             FluentWaitForElementToAppear(By.Id("submit-button"), 10, 500);
             EmailTextBox.SendKeys(TestUser.Email);
             PasswordTextBox.SendKeys(TestUser.Password);
