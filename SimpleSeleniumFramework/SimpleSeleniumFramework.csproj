@@ -227,6 +227,7 @@
     <Compile Include="Websites\bbc news\Pages\MySportPage.cs" />
     <Compile Include="Websites\bbc news\Pages\SignInPage.cs" />
     <Compile Include="Websites\bbc news\Pages\TestUser.cs" />
+    <Compile Include="Websites\bbc news\Steps\AddingTopicSteps.cs" />
     <Compile Include="Websites\bbc news\Steps\SigninSteps.cs" />
   </ItemGroup>
   <ItemGroup>
