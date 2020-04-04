@@ -99,6 +99,7 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
 
         public void ValidateTopicsAddedHaveBeenSaved()
         {
+            FluentWaitForElementToAppear(By.XPath("//*[@id='my-sport']//span[contains(text(), 'Edit My Sport')]"), 10, 500);
             Assert.IsTrue(EditMySport.Enabled, "Edit my sport button was not enabled");
             //TODO
             //Add validation to check that Judo and Formula1 topics are now present on my bbc sport page
