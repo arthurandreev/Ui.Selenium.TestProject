@@ -40,7 +40,7 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Steps
         public void AndISaveMyChanges()
         {
             _mySportPage.SaveMyChanges();
-            _mySportPage.WaitForSavedChangesToastToLoad();
+            _mySportPage.WaitForSavedChangesToastToAppear();
         }
 
         [Then(@"I expect Judo and Formula 1 to have been added to my list of topics")]

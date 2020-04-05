@@ -30,7 +30,7 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
             ClickElement(SaveButton);
         }
 
-        public void WaitForSavedChangesToastToLoad()
+        public void WaitForSavedChangesToastToAppear()
         {
             FluentWaitForElementToAppear(By.XPath("//p[(text() = 'Your changes have been saved.')]"), 10, 500);
             Assert.IsTrue(SavedChangesToast.Displayed, "Your changes have been saved toast was not displayed");
