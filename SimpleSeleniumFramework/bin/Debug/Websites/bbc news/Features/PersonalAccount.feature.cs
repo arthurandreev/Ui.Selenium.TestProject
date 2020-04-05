@@ -72,13 +72,13 @@ namespace SimpleSeleniumFramework.Bin.Debug.Websites.BbcNews.Features
             testRunner.CollectScenarioErrors();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Sign-in to access my bbc sports account", new string[] {
+        [TechTalk.SpecRun.ScenarioAttribute("Sign-in to my bbc sports account", new string[] {
                 "regression"}, SourceLine=6)]
-        public virtual void Sign_InToAccessMyBbcSportsAccount()
+        public virtual void Sign_InToMyBbcSportsAccount()
         {
             string[] tagsOfScenario = new string[] {
                     "regression"};
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sign-in to access my bbc sports account", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sign-in to my bbc sports account", null, new string[] {
                         "regression"});
 #line 7
 this.ScenarioInitialize(scenarioInfo);
@@ -119,14 +119,17 @@ this.ScenarioInitialize(scenarioInfo);
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Adding topics to my bbc sports page", new string[] {
-                "regression"}, SourceLine=14)]
-        public virtual void AddingTopicsToMyBbcSportsPage()
+        [TechTalk.SpecRun.ScenarioAttribute("Add topics to my bbc sports page", new string[] {
+                "regression",
+                "AddTopicsScenario"}, SourceLine=14)]
+        public virtual void AddTopicsToMyBbcSportsPage()
         {
             string[] tagsOfScenario = new string[] {
-                    "regression"};
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Adding topics to my bbc sports page", null, new string[] {
-                        "regression"});
+                    "regression",
+                    "AddTopicsScenario"};
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add topics to my bbc sports page", null, new string[] {
+                        "regression",
+                        "AddTopicsScenario"});
 #line 15
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
