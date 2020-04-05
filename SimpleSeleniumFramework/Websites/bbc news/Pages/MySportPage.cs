@@ -28,8 +28,22 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
         {
             FluentWaitForElementToAppear(By.XPath("//button[(text() = 'Save changes')]"), 10, 500);
             ClickElement(SaveButton);
+        }
+
+        public void WaitForSavedChangesToastToAppear()
+        {
             FluentWaitForElementToAppear(By.XPath("//p[(text() = 'Your changes have been saved.')]"), 10, 500);
             Assert.IsTrue(SavedChangesToast.Displayed, "Your changes have been saved toast was not displayed");
+        }
+
+        public void RemoveTopics()
+        {
+            FluentWaitForElementToAppear(By.XPath("//*[@id='my-sport']//span[contains(text(), 'Edit My Sport')]"), 10, 500);
+            EditMySport.Click();
+            FluentWaitForElementToAppear(By.XPath("//p[contains(text(), 'Formula 1')]"), 10, 500);
+            Formula1.Click();
+            FluentWaitForElementToAppear(By.XPath("//p[contains(text(), 'Judo')]"), 10, 500);
+            Judo.Click();
         }
 
         public void SearchAndAddFormula1()
@@ -93,14 +107,16 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
         public void ValidateMyBbcSportsNewsPage()
         {
             FluentWaitForElementToAppear(By.XPath("//a[contains(text(), 'Get Started')]"), 20, 500);
-            TakeScreenshot();
+            Assert.IsTrue(GetStartedButton.Enabled);
             Assert.AreEqual(PageTitle, GetPageTitle(), $"Expected PageTitle => {PageTitle}. Actual PageTitle => {GetPageTitle()}");
+            TakeScreenshot();
         }
 
         public void ValidateTopicsAddedHaveBeenSaved()
         {
             FluentWaitForElementToAppear(By.XPath("//*[@id='my-sport']//span[contains(text(), 'Edit My Sport')]"), 10, 500);
             Assert.IsTrue(EditMySport.Enabled, "Edit my sport button was not enabled");
+            TakeScreenshot();
             //TODO
             //Add validation to check that Judo and Formula1 topics are now present on my bbc sport page
         }
