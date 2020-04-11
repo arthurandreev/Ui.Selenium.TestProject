@@ -43,7 +43,6 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Steps
         public void ThenIExpectToSeeTheOptionToPersonaliseMyBbcSportsContent()
         {
             _mySportPage.ValidateMyBbcSportsNewsPage();
-            //TODO add logic to validate that Cycling and Swimming topics are now present on my bbc sports page
         }
     }
 }

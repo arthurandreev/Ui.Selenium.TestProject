@@ -1,4 +1,4 @@
-# selenium-framework-project
+# UI test automation framework built with specflow and selenium
 This is a living project with functionality that will be extended regularly to advance knowledge of latest web testing tools and best practices. This is a collaborative project between myself and @LulzimAhmeti. 
 
 ## MVP:
@@ -7,7 +7,7 @@ This is a living project with functionality that will be extended regularly to a
 - Have test setup and test teardown that are run before and after each scenario - DONE
 - Add screenshot taking capability to screenshot NoSuchElementException events for enhanced debugging - DONE
 - Implement Sing-in scenario - DONE
-- Implement Add topics scenario - WIP
+- Implement Add topics scenario - DONE
 
 ## Possible Extensions:
 - Extend the project to allow for cross browser testing - TODO

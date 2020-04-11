@@ -104,12 +104,6 @@ namespace SimpleSeleniumFramework.TestFramework
             
         }
 
-        protected void DismissAlertWithJS()
-        {
-            IJavaScriptExecutor js = (IJavaScriptExecutor)Driver;
-            js.ExecuteScript("window.prompt = function() { return null }");
-        }
-
         protected void JSClickElement(IWebElement element)
         {
             try
