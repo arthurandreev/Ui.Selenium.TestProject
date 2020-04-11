@@ -104,6 +104,8 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
             ValidateMyBbcSportsNewsPage();
             //TODO
             //Add validation to check that Judo and Formula1 topics are now present on my bbc sport page
+
+
         }
     }
 }
