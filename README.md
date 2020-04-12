@@ -28,7 +28,7 @@ This is a living project with functionality that will be extended regularly to a
 2. Open Visual Studio, build solution and navigate to Test and open Test Explorer
 3. Select a specflow scenario, right click on it and hit run. To run all specflow scenarios at once, right click on regression folder and hit run
 
-If you do not have Specflow for Visual Studio extension installed, you will need to install it after step 1. To install Specflow for Visual Studio extension from Visual Studio, navigate to Manage Extensions and install it. After installing it succesfully, move onto step 2.
+If you do not have Specflow for Visual Studio extension installed, you will need to install it after step 1. To install Specflow for Visual Studio extension, open Visual Studio, navigate to Manage Extensions and install it. After installing it succesfully, move onto step 2.
 
 ## To run it from Command Prompt or Git Bash
 1. Open Git Bash in the project directory or open Command Prompt and navigate to project directory
