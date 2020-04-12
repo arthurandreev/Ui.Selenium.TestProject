@@ -1,7 +1,7 @@
 # UI test automation framework built with specflow and selenium
 This is a living project with functionality that will be extended regularly to advance knowledge of latest web testing tools and best practices. This is a collaborative project between myself and @LulzimAhmeti. 
 
-## MVP:
+## MVP
 - Implement Page Object Model design pattern - DONE
 - Integrate Specflow into project - DONE
 - Have test setup and test teardown that are run before and after each scenario - DONE
@@ -9,7 +9,7 @@ This is a living project with functionality that will be extended regularly to a
 - Implement Sing-in scenario - DONE
 - Implement Add topics scenario - DONE
 
-## Possible Extensions:
+## Possible Extensions
 - Extend the project to allow for cross browser testing - TODO
 - Host the project on a cloud hosting platform to enable automated nightly test runs in CI/CD pipeline - TODO
 - Extend the project to integrate Selenium Grid to enable parallel running of tests on multiple browsers in the cloud - TODO
@@ -27,7 +27,7 @@ If you do not have Specflow for Visual Studio extension installed, you will need
 2. To run all specflow test scenarios, enter the following command and hit enter
 > dotnet test
 
-## Some of the resources used to complete this project:
+## Some of the resources used to complete this project
 - https://www.selenium.dev/selenium/docs/api/dotnet/index.html
 - https://www.automatetheplanet.com/selenium-webdriver-locators-cheat-sheet/
 - https://specflow.org/documentation/
