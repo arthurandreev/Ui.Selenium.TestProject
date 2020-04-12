@@ -30,5 +30,8 @@ This is a living project with functionality that will be extended regularly to a
 
 If you do not have Specflow for Visual Studio extension installed, you will need to install it after step 1. To install Specflow for Visual Studio extension from Visual Studio, navigate to Manage Extensions and install it. After installing it succesfully, move onto step 2.
 
-
+## To run it from command line in gitbash
+1. Open Git Bash in the project directory
+2. To run all tests, enter the following command and hit enter
+> dotnet test
 
