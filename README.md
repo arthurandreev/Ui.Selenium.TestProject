@@ -23,5 +23,12 @@ This is a living project with functionality that will be extended regularly to a
 - https://devhints.io/xpath
 - https://specflow.org/documentation/Troubleshooting-Visual-Studio-Integration/
 
+## Installing and running the project in Visual Studio 2019
+1. Clone project or download as Zip
+2. Open Visual Studio, build solution and navigate to Test and open Test Explorer
+3. Select a specflow scenario, right click on it and hit run. To run all specflow scenarios at once, right click on regression folder and hit run
+
+If you do not have Specflow for Visual Studio extension installed, you will need to install it after step 1. To install Specflow for Visual Studio extension from Visual Studio, navigate to Manage Extensions and install it. After installing it succesfully, move onto step 2.
+
 
 
