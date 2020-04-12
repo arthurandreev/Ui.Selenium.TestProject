@@ -14,14 +14,6 @@ This is a living project with functionality that will be extended regularly to a
 - Host the project on a cloud hosting platform to enable automated nightly test runs in CI/CD pipeline - TODO
 - Extend the project to integrate Selenium Grid to enable parallel running of tests on multiple browsers in the cloud - TODO
 
-## Some of the resources used to complete this project:
-- https://www.selenium.dev/selenium/docs/api/dotnet/index.html
-- https://www.automatetheplanet.com/selenium-webdriver-locators-cheat-sheet/
-- https://specflow.org/documentation/
-- https://ultimateqa.com/common-selenium-webdriver-errors-fix/
-- https://ui.vision/rpa/docs/selenium-ide
-- https://devhints.io/xpath
-- https://specflow.org/documentation/Troubleshooting-Visual-Studio-Integration/
 
 ## Installing and running the project in Visual Studio 2019
 1. Clone project or download as Zip
@@ -35,3 +27,11 @@ If you do not have Specflow for Visual Studio extension installed, you will need
 2. To run all specflow test scenarios, enter the following command and hit enter
 > dotnet test
 
+## Some of the resources used to complete this project:
+- https://www.selenium.dev/selenium/docs/api/dotnet/index.html
+- https://www.automatetheplanet.com/selenium-webdriver-locators-cheat-sheet/
+- https://specflow.org/documentation/
+- https://ultimateqa.com/common-selenium-webdriver-errors-fix/
+- https://ui.vision/rpa/docs/selenium-ide
+- https://devhints.io/xpath
+- https://specflow.org/documentation/Troubleshooting-Visual-Studio-Integration/
