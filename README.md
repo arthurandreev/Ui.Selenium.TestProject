@@ -14,6 +14,9 @@ This is a living project with functionality that will be extended regularly to a
 - Host the project on a cloud hosting platform to enable automated nightly test runs in CI/CD pipeline - TODO
 - Extend the project to integrate Selenium Grid to enable parallel running of tests on multiple browsers in the cloud - TODO
 
+## Sign-in scenario giphy
+![](sing-in-scenario.gif)
+
 
 ## Installing and running the project in Visual Studio 2019
 1. Clone project or download as Zip
@@ -26,9 +29,6 @@ If you do not have Specflow for Visual Studio extension installed, you will need
 1. Open Git Bash in the project directory or open Command Prompt and navigate to project directory
 2. To run all specflow test scenarios, enter the following command and hit enter
 > dotnet test
-
-Sign-in scenario giphy
-![](sing-in-scenario.gif)
 
 ## Some of the resources used to complete this project
 - https://www.selenium.dev/selenium/docs/api/dotnet/index.html
