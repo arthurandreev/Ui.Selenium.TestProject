@@ -28,7 +28,7 @@ If you do not have Specflow for Visual Studio extension installed, you will need
 > dotnet test
 
 Sign-in scenario giphy
-![](name-of-giphy.gif)
+![](sing-in-scenario.gif)
 
 ## Some of the resources used to complete this project
 - https://www.selenium.dev/selenium/docs/api/dotnet/index.html
