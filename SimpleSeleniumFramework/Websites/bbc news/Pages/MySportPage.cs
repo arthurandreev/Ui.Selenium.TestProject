@@ -20,8 +20,7 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
         public IWebElement Judo => GetElement(By.XPath("//p[contains(text(), 'Judo')]"));
         public IWebElement Formula1 => GetElement(By.XPath("//p[contains(text(), 'Formula 1')]"));
         public IWebElement SaveButton => GetElement(By.XPath("//button[(text() = 'Save changes')]"));
-        public IWebElement ClearTextButton => GetElement(By.CssSelector("span[class = 'sp-c-mysport-search__icon sp-c-mysport-search__icon--reset gelicon gelicon--no']"));
-
+        public IWebElement ClearTextButton => GetElement(By.CssSelector("span[aria-role = 'hidden']"));
         public MySportPage(IWebDriver driver, ScenarioContext scenarioContext) : base(driver, scenarioContext) { }
 
         public void SaveMyChanges()
@@ -57,7 +56,7 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
 
         public void ClearSeartTopicsBar()
         {
-            FluentWaitForElementToAppear(By.CssSelector("span[class = 'sp-c-mysport-search__icon sp-c-mysport-search__icon--reset gelicon gelicon--no']"), 10, 500);
+            FluentWaitForElementToAppear(By.CssSelector("span[aria-role = 'hidden']"), 10, 500);
             ClickElement(ClearTextButton);
         }
 
