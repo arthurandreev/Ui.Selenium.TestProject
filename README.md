@@ -27,6 +27,9 @@ If you do not have Specflow for Visual Studio extension installed, you will need
 2. To run all specflow test scenarios, enter the following command and hit enter
 > dotnet test
 
+Sign-in scenario giphy
+![](name-of-giphy.gif)
+
 ## Some of the resources used to complete this project
 - https://www.selenium.dev/selenium/docs/api/dotnet/index.html
 - https://www.automatetheplanet.com/selenium-webdriver-locators-cheat-sheet/
