@@ -40,3 +40,4 @@ If you do not have Specflow for Visual Studio extension installed, you will need
 - https://ui.vision/rpa/docs/selenium-ide
 - https://devhints.io/xpath
 - https://specflow.org/documentation/Troubleshooting-Visual-Studio-Integration/
+- https://medium.com/@josephcardillo/how-to-add-gifs-to-your-github-readme-89c74da2ce47
