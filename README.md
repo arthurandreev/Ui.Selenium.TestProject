@@ -14,9 +14,11 @@ This is a living project with functionality that will be extended regularly to a
 - Host the project on a cloud hosting platform to enable automated nightly test runs in CI/CD pipeline - TODO
 - Extend the project to integrate Selenium Grid to enable parallel running of tests on multiple browsers in the cloud - TODO
 
-## Sign-in scenario giphy
+### Sign-in scenario giphy
 ![](sing-in-scenario.gif)
 
+### Add topics scenario giphy
+![](add-topics-scenario.gif)
 
 ## Installing and running the project in Visual Studio 2019
 1. Clone project or download as Zip
