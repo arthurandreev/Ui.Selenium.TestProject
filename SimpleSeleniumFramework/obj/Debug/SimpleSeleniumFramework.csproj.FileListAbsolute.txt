@@ -591,6 +591,7 @@ C:\Users\arthurandreev\source\repos\ui-automation-framework\SimpleSeleniumFramew
 C:\Users\arthurandreev\source\repos\ui-automation-framework\SimpleSeleniumFramework\bin\Debug\WebDriver.xml
 C:\Users\arthurandreev\source\repos\ui-automation-framework\SimpleSeleniumFramework\bin\Debug\WebDriver.Support.xml
 C:\Users\arthurandreev\source\repos\ui-automation-framework\SimpleSeleniumFramework\obj\Debug\SimpleSeleniumFramework.csprojAssemblyReference.cache
+C:\Users\arthurandreev\source\repos\ui-automation-framework\SimpleSeleniumFramework\obj\Debug\SimpleSeleniumFramework.csproj.CoreCompileInputs.cache
 C:\Users\arthurandreev\source\repos\ui-automation-framework\SimpleSeleniumFramework\obj\Debug\SimpleSeleniumFramework.sourcelink.json
 C:\Users\arthurandreev\source\repos\ui-automation-framework\SimpleSeleniumFramework\obj\Debug\SimpleSeleniumFramework.csproj.CopyComplete
 C:\Users\arthurandreev\source\repos\ui-automation-framework\SimpleSeleniumFramework\obj\Debug\SimpleSeleniumFramework.dll
