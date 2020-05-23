@@ -6,17 +6,19 @@ This is a living project with functionality that will be extended regularly to a
 - Integrate Specflow into project - DONE
 - Have test setup and test teardown that are run before and after each scenario - DONE
 - Add screenshot taking capability to screenshot NoSuchElementException events for enhanced debugging - DONE
-- Implement Sing-in scenario - DONE
-- Implement Add topics scenario - DONE
+- Implement Sing-in to my bbc sports account scenario - DONE
+- Implement Add topics to my bbc sports page scenario - DONE
 
 ## Possible Extensions
 - Extend the project to allow for cross browser testing - TODO
 - Host the project on a cloud hosting platform to enable automated nightly test runs in CI/CD pipeline - TODO
 - Extend the project to integrate Selenium Grid to enable parallel running of tests on multiple browsers in the cloud - TODO
 
-## Sign-in scenario giphy
+### Scenario: Sign-in to my bbc sports account
 ![](sing-in-scenario.gif)
 
+### Scenario: Add topics to my bbc sports page
+![](add-topics-scenario.gif)
 
 ## Installing and running the project in Visual Studio 2019
 1. Clone project or download as Zip
@@ -38,3 +40,5 @@ If you do not have Specflow for Visual Studio extension installed, you will need
 - https://ui.vision/rpa/docs/selenium-ide
 - https://devhints.io/xpath
 - https://specflow.org/documentation/Troubleshooting-Visual-Studio-Integration/
+- https://medium.com/@josephcardillo/how-to-add-gifs-to-your-github-readme-89c74da2ce47
+- https://www.endava.com/en/blog/Engineering/2020/Cucumber-automation-framework-or-collaboration-tool
