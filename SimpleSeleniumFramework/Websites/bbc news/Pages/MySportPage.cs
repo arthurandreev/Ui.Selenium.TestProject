@@ -17,11 +17,12 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
         private IWebElement EditMySport => GetElement(By.XPath("//*[@id='my-sport']//span[contains(text(), 'Edit My Sport')]"));
         private IWebElement GetStartedButton => GetElement(By.XPath("//a[contains(text(), 'Get Started')]"));
         private IWebElement SearchTopicsBar => GetElement(By.CssSelector("input[type = 'text'][placeholder = 'Enter a sport, competition or team']"));
-        public IWebElement Judo => GetElement(By.XPath("//p[contains(text(), 'Judo')]"));
-        public IWebElement Formula1 => GetElement(By.XPath("//p[contains(text(), 'Formula 1')]"));
-        public IWebElement SaveButton => GetElement(By.XPath("//button[(text() = 'Save changes')]"));
-        public IWebElement ClearTextButton => GetElement(By.CssSelector("span[class = 'sp-c-mysport-search__icon sp-c-mysport-search__icon--reset gelicon gelicon--no']"));
-
+        private IWebElement Judo => GetElement(By.XPath("//p[contains(text(), 'Judo')]"));
+        private IWebElement Formula1 => GetElement(By.XPath("//p[contains(text(), 'Formula 1')]"));
+        private IWebElement SaveButton => GetElement(By.XPath("//button[(text() = 'Save changes')]"));
+        private IWebElement ClearTextButton => GetElement(By.CssSelector("span[aria-role = 'hidden']"));
+        private IWebElement JudoNewsSection => GetElement(By.CssSelector("a[href = '/sport/judo']"));
+        private IWebElement Formula1NewsSection => GetElement(By.XPath("//*[@class='component twickenham']//a[@href='/sport/formula1']//span[contains(text(), 'Formula 1')]"));
         public MySportPage(IWebDriver driver, ScenarioContext scenarioContext) : base(driver, scenarioContext) { }
 
         public void SaveMyChanges()
@@ -57,7 +58,7 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
 
         public void ClearSeartTopicsBar()
         {
-            FluentWaitForElementToAppear(By.CssSelector("span[class = 'sp-c-mysport-search__icon sp-c-mysport-search__icon--reset gelicon gelicon--no']"), 10, 500);
+            FluentWaitForElementToAppear(By.CssSelector("span[aria-role = 'hidden']"), 10, 500);
             ClickElement(ClearTextButton);
         }
 
@@ -115,10 +116,10 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
         public void ValidateTopicsAddedHaveBeenSaved()
         {
             FluentWaitForElementToAppear(By.XPath("//*[@id='my-sport']//span[contains(text(), 'Edit My Sport')]"), 10, 500);
-            Assert.IsTrue(EditMySport.Enabled, "Edit my sport button was not enabled");
+            Assert.IsTrue(EditMySport.Enabled, "Edit my sport button did not appear on the page");
+            Assert.IsTrue(JudoNewsSection.Enabled, "Judo news section did not appear on the page");
+            Assert.IsTrue(Formula1NewsSection.Enabled, "Formula 1 news section did not appear on the page");
             TakeScreenshot();
-            //TODO
-            //Add validation to check that Judo and Formula1 topics are now present on my bbc sport page
         }
     }
 }
