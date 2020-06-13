@@ -596,3 +596,5 @@ C:\Users\arthurandreev\source\repos\ui-automation-framework\SimpleSeleniumFramew
 C:\Users\arthurandreev\source\repos\ui-automation-framework\SimpleSeleniumFramework\obj\Debug\SimpleSeleniumFramework.csproj.CopyComplete
 C:\Users\arthurandreev\source\repos\ui-automation-framework\SimpleSeleniumFramework\obj\Debug\SimpleSeleniumFramework.dll
 C:\Users\arthurandreev\source\repos\ui-automation-framework\SimpleSeleniumFramework\obj\Debug\SimpleSeleniumFramework.pdb
+C:\Users\arthurandreev\source\repos\ui-automation-framework\SimpleSeleniumFramework\bin\Debug\NLog.config
+C:\Users\arthurandreev\source\repos\ui-automation-framework\SimpleSeleniumFramework\bin\Debug\NLog.dll

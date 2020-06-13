@@ -11,7 +11,6 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
         private IWebElement SignInButton => GetElement(By.Id("submit-button"));
         private IWebElement EmailTextBox => GetElement(By.Id("user-identifier-input"));
         private IWebElement PasswordTextBox => GetElement(By.Id("password-input"));
-
         private readonly TestUser TestUser = new TestUser();
         public SignInPage(IWebDriver driver, ScenarioContext scenarioContext) : base(driver, scenarioContext) 
         {
