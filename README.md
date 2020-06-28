@@ -2,7 +2,7 @@
 This is a living project with functionality that will be extended regularly to advance knowledge of latest web testing tools and best practices. This is a collaborative project between myself and @LulzimAhmeti. 
 
 ## BBC sports website
-## MVP
+### MVP
 - Implement Page Object Model design pattern - DONE
 - Integrate Specflow into project - DONE
 - Have test setup and test teardown that are run before and after each scenario - DONE
@@ -10,7 +10,7 @@ This is a living project with functionality that will be extended regularly to a
 - Implement Sing-in to my bbc sports account scenario - DONE
 - Implement Add topics to my bbc sports page scenario - DONE
 
-## Possible Extensions
+### Possible Extensions
 - Extend the project to allow for cross browser testing - TODO
 - Host the project on a cloud hosting platform to enable automated nightly test runs in CI/CD pipeline - TODO
 - Extend the project to integrate Selenium Grid to enable parallel running of tests on multiple browsers in the cloud - TODO
