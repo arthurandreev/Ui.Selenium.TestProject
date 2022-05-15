@@ -4,7 +4,7 @@ using SimpleSeleniumFramework.TestFramework;
 using System;
 using TechTalk.SpecFlow;
 
-namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
+namespace SimpleSeleniumFramework.POMs
 {
     public class MySportPage : PageManagerFactory
     {
@@ -80,7 +80,7 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
             FluentWaitForElementToAppear(By.CssSelector("input[type = 'text'][placeholder = 'Enter a sport, competition or team']"), 20, 500);
             SearchAndAddFormula1();
             ClearSeartTopicsBar();
-            SearchAndAddJudo();        
+            SearchAndAddJudo();
         }
 
         public void AcceptCookies()
@@ -88,7 +88,7 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
             FluentWaitForElementToAppear(By.Id("bbcprivacy-continue-button"), 10, 500);
             ClickElement(OkCookiesButton);
             FluentWaitForElementToAppear(By.Id("bbccookies-continue-button"), 10, 500);
-            ClickElement(AcceptCookiesButton);              
+            ClickElement(AcceptCookiesButton);
         }
 
         public void NavigateToMySportPage()

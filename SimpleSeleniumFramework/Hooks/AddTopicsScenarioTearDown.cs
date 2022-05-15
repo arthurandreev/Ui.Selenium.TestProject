@@ -1,9 +1,9 @@
 ﻿using OpenQA.Selenium;
-using SimpleSeleniumFramework.Websites.bbc_news.Pages;
+using SimpleSeleniumFramework.POMs;
 using System;
 using TechTalk.SpecFlow;
 
-namespace SimpleSeleniumFramework.Websites.bbc_news.Hooks
+namespace SimpleSeleniumFramework.Hooks
 {
     [Binding]
     public class AddTopicsScenarioTearDown
@@ -19,7 +19,6 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Hooks
         {
             _mySportPage.RemoveTopics();
             _mySportPage.SaveMyChanges();
-            _mySportPage.ValidateMyBbcSportsNewsPage();
         }
     }
 }

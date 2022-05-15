@@ -1,4 +1,4 @@
-﻿namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
+﻿namespace SimpleSeleniumFramework.POMs
 {
     public class TestUser
     {

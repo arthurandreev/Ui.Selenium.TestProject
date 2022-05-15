@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace SimpleSeleniumFramework.Websites.BbcNews.Features
+namespace SimpleSeleniumFramework.Features
 {
     using TechTalk.SpecFlow;
     using System;
@@ -20,7 +20,7 @@ namespace SimpleSeleniumFramework.Websites.BbcNews.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.1.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [TechTalk.SpecRun.FeatureAttribute("PersonalAccount", Description="As a user, \r\nI want to sign into my bbc account, \r\nSo that I can personalise bbc " +
-        "sports content to my preference", SourceFile="Websites\\bbc news\\Features\\PersonalAccount.feature", SourceLine=0)]
+        "sports content to my preference", SourceFile="Features\\PersonalAccount.feature", SourceLine=0)]
     public partial class PersonalAccountFeature
     {
         

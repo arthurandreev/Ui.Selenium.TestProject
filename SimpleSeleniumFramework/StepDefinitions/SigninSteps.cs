@@ -1,8 +1,8 @@
 ﻿using OpenQA.Selenium;
-using SimpleSeleniumFramework.Websites.bbc_news.Pages;
+using SimpleSeleniumFramework.POMs;
 using TechTalk.SpecFlow;
 
-namespace SimpleSeleniumFramework.Websites.bbc_news.Steps
+namespace SimpleSeleniumFramework.StepDefinitions
 {
     [Binding]
     public sealed class SigninSteps

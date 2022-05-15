@@ -233,12 +233,12 @@
     <Compile Include="TestFramework\DriverManagerFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestFramework\PageManagerFactory.cs" />
-    <Compile Include="Websites\bbc news\Hooks\AddTopicsScenarioTearDown.cs" />
-    <Compile Include="Websites\bbc news\Pages\MySportPage.cs" />
-    <Compile Include="Websites\bbc news\Pages\SignInPage.cs" />
-    <Compile Include="Websites\bbc news\Pages\TestUser.cs" />
-    <Compile Include="Websites\bbc news\Steps\AddTopicsSteps.cs" />
-    <Compile Include="Websites\bbc news\Steps\SigninSteps.cs" />
+    <Compile Include="Hooks\AddTopicsScenarioTearDown.cs" />
+    <Compile Include="POMs\MySportPage.cs" />
+    <Compile Include="POMs\SignInPage.cs" />
+    <Compile Include="POMs\TestUser.cs" />
+    <Compile Include="StepDefinitions\AddTopicsSteps.cs" />
+    <Compile Include="StepDefinitions\SigninSteps.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="NLog.config">
@@ -255,7 +255,7 @@
     <None Include="SpecRunTestProfile_2011_09.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Websites\bbc news\Features\PersonalAccount.feature">
+    <None Include="Features\PersonalAccount.feature">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

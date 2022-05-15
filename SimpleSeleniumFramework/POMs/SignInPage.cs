@@ -3,7 +3,7 @@ using OpenQA.Selenium;
 using SimpleSeleniumFramework.TestFramework;
 using TechTalk.SpecFlow;
 
-namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
+namespace SimpleSeleniumFramework.POMs
 {
     public class SignInPage : PageManagerFactory
     {
@@ -12,7 +12,7 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
         private IWebElement EmailTextBox => GetElement(By.Id("user-identifier-input"));
         private IWebElement PasswordTextBox => GetElement(By.Id("password-input"));
         private readonly TestUser TestUser = new TestUser();
-        public SignInPage(IWebDriver driver, ScenarioContext scenarioContext) : base(driver, scenarioContext) 
+        public SignInPage(IWebDriver driver, ScenarioContext scenarioContext) : base(driver, scenarioContext)
         {
         }
 
@@ -25,7 +25,7 @@ namespace SimpleSeleniumFramework.Websites.bbc_news.Pages
         }
         public void SignIn()
         {
-            ClickElement(SignInButton);          
+            ClickElement(SignInButton);
         }
     }
 }
